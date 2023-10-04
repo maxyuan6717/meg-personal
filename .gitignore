@@ -4,10 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-
+.yarn/
 # testing
 /coverage
-
+.env
 # production
 /build
 
