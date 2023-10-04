@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Navbar } from '../components/Navbar';
-import { Icons, Text } from '../ui';
+import { Icons, Link, Text } from '../ui';
 import { palette } from '../ui/theme/base/palette';
 
 import * as Styled from './Home.styles';
@@ -20,17 +20,24 @@ export const Home = () => {
           <br />
           Want to connect, chat, or discuss a project?
           <br />
-          Reach out to me at megyuan@ucla.edu.
+          Reach out to me at{' '}
+          <Link href="mailto: megyuan@ucla.edu">megyuan@ucla.edu</Link>.
         </Text>
         <Styled.ButtonRow>
           <Styled.Button>
-            <Icons.linkedIn fill={palette['off-black']} />
+            <Icons.linkedIn />
           </Styled.Button>
           <Styled.Button>
-            <Icons.pdf fill={palette['off-black']} />
+            <Icons.pdf />
           </Styled.Button>
         </Styled.ButtonRow>
       </Styled.SplashContent>
+      <Styled.MyWorkContainer>
+        <Text type="text-t3">my work</Text>
+        <Styled.DownArrow>
+          <Icons.downArrow />
+        </Styled.DownArrow>
+      </Styled.MyWorkContainer>
     </Styled.Splash>
   );
 };
