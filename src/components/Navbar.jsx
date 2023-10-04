@@ -11,6 +11,7 @@ const Container = styled.div`
   grid-template-columns: 1fr auto auto;
   column-gap: 54px;
   align-items: center;
+  width: 100%;
 `;
 
 export const NavLink = styled(Text)`

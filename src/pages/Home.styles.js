@@ -17,7 +17,7 @@ export const Splash = styled.div`
 
 export const SplashContent = styled.div`
   width: 800px;
-  margin: 10vh 0 0 20vw;
+  margin: 8vh 0 0 18vw;
 
   > :nth-child(2) {
     margin: 10px 0 25px 0;

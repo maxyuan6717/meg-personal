@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Navbar } from '../components/Navbar';
 import { Icons, Link, Text } from '../ui';
-import { palette } from '../ui/theme/base/palette';
 
 import * as Styled from './Home.styles';
 
