@@ -40,7 +40,6 @@ export const ButtonRow = styled(Row)`
 `;
 
 export const Button = styled.a`
-  cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   :hover {

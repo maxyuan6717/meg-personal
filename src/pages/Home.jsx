@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
+import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import Phone1 from '../images/dumpling-preview/phone1.png';
 import Phone2 from '../images/dumpling-preview/phone2.png';
@@ -65,6 +66,7 @@ export const Home = () => {
             </Row>
           </Styled.Work>
         </RouterLink>
+        <Footer />
       </Styled.WorksContainer>
     </>
   );

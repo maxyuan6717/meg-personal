@@ -6,6 +6,7 @@ import Profile from '../images/profile.png';
 import { Link, Text } from '../ui';
 
 import * as Styled from './About.styles';
+import { Footer } from '../components/Footer';
 
 export const About = () => {
   return (
@@ -55,6 +56,7 @@ export const About = () => {
           <Link href="mailto: megyuan@ucla.edu">megyuan@ucla.edu</Link>.
         </Text>
       </Styled.Content>
+      <Footer />
     </Styled.Container>
   );
 };

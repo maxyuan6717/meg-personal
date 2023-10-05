@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled(Column)`
-  margin: 100px auto;
+  margin: 100px auto 0 auto;
 `;
 
 export const FirstSection = styled.div`
