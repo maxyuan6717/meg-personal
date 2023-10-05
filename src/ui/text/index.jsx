@@ -16,6 +16,7 @@ const TextStyle = styled.div`
   ${({ color, theme }) => (color ? `color: ${theme.palette[color]};` : '')}
   ${({ weight }) => (weight ? `font-weight: ${weight};` : '')}
   ${({ size }) => (size ? `font-size: ${size}px;` : '')}
+  ${({ lineHeight }) => (lineHeight ? `line-height: ${lineHeight}px;` : '')}
 `;
 
 export const _Text = ({ type, children, ...rest }) => {

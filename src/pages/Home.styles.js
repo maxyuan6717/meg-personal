@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 import { Column, Row, Text } from '../ui';
+import { Color } from '../util';
 
 export const Splash = styled.div`
   background-color: ${({ theme }) => theme.palette['off-white']};
@@ -67,4 +68,45 @@ const bob = keyframes`
 export const DownArrow = styled.div`
   display: flex;
   animation: ${bob} 4s ease-in-out infinite;
+`;
+
+export const WorksContainer = styled(Column)`
+  min-height: 100vh;
+
+  padding-top: 144px;
+`;
+
+export const Work = styled.div`
+  filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.25));
+  background-color: ${({ theme }) =>
+    Color.makeHexTranslucent(theme.palette.red, 0.6)};
+  cursor: pointer;
+  width: 1220px;
+  height: 684px;
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+
+  > ${Row} {
+    transition: transform 0.2s ease-in-out;
+    margin: auto;
+    justify-content: center;
+
+    > :first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &:hover {
+    background-color: ${({ theme }) =>
+      Color.makeHexTranslucent(theme.palette.red, 0.7)};
+
+    > ${Row} {
+      transform: scale(1.05);
+    }
+  }
+`;
+
+export const Phone = styled.img`
+  width: 200px;
+  height: auto;
 `;

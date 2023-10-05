@@ -13,7 +13,9 @@ export const textStyles = {
     'text-t2': `400 35px ${Font.SansSerif}`,
     'text-t3': `400 30px ${Font.SansSerif}`,
     'text-t4': `400 25px ${Font.SansSerif}`,
-    'text-t5': `400 22px ${Font.SansSerif}`
+    'text-t5': `400 22px ${Font.SansSerif}`,
+    'cursive-c1': `400 80px ${Font.Cursive}`,
+    'cursive-c2': `400 72px ${Font.Cursive}`
   },
   mobile: {
     'display-h1': `400 80px ${Font.Serif}`,

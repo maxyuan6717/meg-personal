@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Color } from '../../util';
 
 const Container = styled.a`
-  padding: 0px 2px;
+  padding: 0 2px;
   transition: all 0.3s ease-in-out;
   box-sizing: border-box;
   text-decoration: none;
