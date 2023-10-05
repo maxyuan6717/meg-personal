@@ -50,9 +50,9 @@ export const Home = () => {
             <Row>
               <div>
                 <Text type="cursive-c2" color="white" lineHeight={80}>
-                  Dumpling
+                  DUMPLING
                   <br />
-                  Delight
+                  DELIGHT
                 </Text>
                 <Text type="text-t3" color="white">
                   Enhancing the dine-in

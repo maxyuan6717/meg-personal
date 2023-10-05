@@ -41,7 +41,7 @@ export const ButtonRow = styled(Row)`
 
 export const Button = styled.a`
   transition: all 0.2s ease-in-out;
-
+  cursor: pointer;
   :hover {
     transform: translateY(-6px);
     opacity: 0.5;
