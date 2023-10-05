@@ -1,12 +1,12 @@
 import React from 'react';
 
+import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import Oatmeal from '../images/oatmeal.png';
 import Profile from '../images/profile.png';
 import { Link, Text } from '../ui';
 
 import * as Styled from './About.styles';
-import { Footer } from '../components/Footer';
 
 export const About = () => {
   return (
