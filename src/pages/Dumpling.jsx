@@ -58,6 +58,11 @@ export const Dumpling = () => {
           popularized online ordering—but at the expense of potential lower food
           quality.
         </Text>
+        <Styled.ProblemQuestion type="text-t3" color="red">
+          How might we expedite the dine-in ordering process while maintaining
+          the quality and freshness of food?
+          <div>?</div>
+        </Styled.ProblemQuestion>
         <Styled.SectionDivider>SOLUTION</Styled.SectionDivider>
         <Styled.SectionTitle>
           All-in-one mobile restaurant app for ordering, tracking, and paying.
@@ -68,6 +73,89 @@ export const Dumpling = () => {
           <b>elevated dine-in experience</b> for a fictional casual authentic
           Chinese restaurant, Dumpling Delight.
         </Text>
+        <Styled.Steps>
+          <Styled.Step>
+            <Styled.StepText>
+              <Text type="text-t2" weight={700}>
+                Ordering
+              </Text>
+              <Text type="text-t5">
+                <ul>
+                  <li>Start ordering whenever you are ready</li>
+                  <li>
+                    Easy-to-read menu with enticing imagery and nutritional
+                    breakdowns
+                  </li>
+                  <li>Order more and reorder anytime</li>
+                </ul>
+              </Text>
+              <div className="bg-number">1</div>
+            </Styled.StepText>
+            <video width="410" height="auto" autoPlay loop muted>
+              <source
+                src="videos/dumpling-case/solution1.mov"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </Styled.Step>
+          <Styled.Step>
+            <video width="410" height="auto" autoPlay loop muted>
+              <source
+                src="videos/dumpling-case/solution2.mov"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <Styled.StepText>
+              <Text type="text-t2" weight={700}>
+                Tracking
+              </Text>
+              <Text type="text-t5">
+                <ul>
+                  <li>
+                    Scan your table barcode at the start to link your orders to
+                    the kitchen
+                  </li>
+                  <li>
+                    Receive up-to-date tracking for each ordered item from
+                    preparation to arrival
+                  </li>
+                  <li>Track the status of all ordered items on one page</li>
+                </ul>
+              </Text>
+              <div className="bg-number">2</div>
+            </Styled.StepText>
+          </Styled.Step>
+          <Styled.Step>
+            <Styled.StepText>
+              <Text type="text-t2" weight={700}>
+                Paying
+              </Text>
+              <Text type="text-t5">
+                <ul>
+                  <li>Pay whenever you are ready</li>
+                  <li>
+                    Multiple payment options, including traditionally through
+                    check and via online payment forms
+                  </li>
+                  <li>
+                    “Split the Bill” feature eliminates the hassle of pulling
+                    out a calculator post-payment (for parties up to 3)
+                  </li>
+                </ul>
+              </Text>
+              <div className="bg-number">3</div>
+            </Styled.StepText>
+            <video width="410" height="auto" autoPlay loop muted>
+              <source
+                src="videos/dumpling-case/solution3.mov"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </Styled.Step>
+        </Styled.Steps>
         <Styled.SectionDivider>COMPETITIVE ANALYSIS</Styled.SectionDivider>
         <Styled.SectionTitle>
           No restaurant offers online ordering and real-time tracking for

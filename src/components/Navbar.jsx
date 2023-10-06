@@ -64,7 +64,7 @@ export const Navbar = () => {
           Works
         </NavLink>
       </Link>
-      <Link to="about">
+      <Link to="/about">
         <NavLink type="text-t4" selected={pathname === '/about'}>
           About
         </NavLink>

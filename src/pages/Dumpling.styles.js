@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Column, Row } from '../ui';
+import { Column, Row, Text } from '../ui';
 import { Color } from '../util';
 
 export const Header = styled(Row)`
@@ -34,6 +34,7 @@ export const Content = styled(Column)`
 
 export const IntroSection = styled(Row)`
   padding: 60px 80px 0 80px;
+  margin-bottom: -20px;
   justify-content: space-between;
   align-items: flex-start;
 
@@ -60,11 +61,72 @@ export const SectionTitle = styled.div`
   font-weight: 700;
 `;
 
+export const ProblemQuestion = styled(Text)`
+  margin-top: 80px;
+  padding: 0 145px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+
+  > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 250px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.palette.red};
+    opacity: 0.07;
+    z-index: -1;
+    line-height: 250px;
+  }
+`;
+
 export const UserInterviewsList = styled.ol`
   margin-top: 15px;
   margin-left: 10px;
 
   > :not(:first-child) {
     margin-top: 10px;
+  }
+`;
+
+export const Steps = styled.div`
+  margin-top: 65px;
+  > :not(:first-child) {
+    margin-top: 150px;
+  }
+`;
+
+export const Step = styled(Row)`
+  justify-content: center;
+  > :first-child {
+    margin-right: 100px;
+  }
+`;
+
+export const StepText = styled.div`
+  position: relative;
+  max-width: 443px;
+
+  ul {
+    margin-top: 15px;
+    margin-left: 10px;
+
+    > :not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  > .bg-number {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-20%, -50%);
+    font-size: 500px;
+    line-height: 500px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.palette.red};
+    opacity: 0.07;
   }
 `;
