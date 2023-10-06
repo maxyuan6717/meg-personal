@@ -267,3 +267,36 @@ export const ImprovementVideos = styled(Row)`
     font-size: 20px;
   }
 `;
+
+export const FinalGrid = styled.div`
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-gap: 25px;
+  justify-content: center;
+
+  > img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+export const Reflections = styled.div`
+  > :not(:first-child) {
+    margin-top: 30px;
+  }
+
+  ul,
+  ol {
+    margin-left: 10px;
+
+    > :not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+`;
+
+export const ThankYou = styled.div`
+  > :first-child {
+    margin-bottom: 38px;
+  }
+`;

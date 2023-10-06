@@ -4,13 +4,19 @@ import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import Chipotle from '../images/dumpling-case/chipotle.png';
 import Dominos from '../images/dumpling-case/dominos.jpeg';
+import Final1 from '../images/dumpling-case/final1.png';
+import Final2 from '../images/dumpling-case/final2.png';
+import Final3 from '../images/dumpling-case/final3.png';
+import Final4 from '../images/dumpling-case/final4.png';
+import Final5 from '../images/dumpling-case/final5.png';
+import Final6 from '../images/dumpling-case/final6.png';
 import Haidilao from '../images/dumpling-case/heidilao.jpeg';
 import Persona from '../images/dumpling-case/persona.png';
 import Sunright from '../images/dumpling-case/sunright.png';
 import Phone1 from '../images/dumpling-preview/phone1.png';
 import Phone2 from '../images/dumpling-preview/phone2.png';
 import Phone3 from '../images/dumpling-preview/phone3.png';
-import { Column, Icons, Row, Text } from '../ui';
+import { Column, Icons, Link, Row, Text } from '../ui';
 
 import * as Styled from './Dumpling.styles';
 
@@ -462,7 +468,92 @@ export const Dumpling = () => {
         </Styled.Steps>
         <Styled.SectionDivider>FINAL PRODUCT</Styled.SectionDivider>
         <Styled.SectionTitle>The final design</Styled.SectionTitle>
+        <Styled.FinalGrid>
+          <img src={Final1} />
+          <img src={Final2} />
+          <img src={Final3} />
+          <img src={Final4} />
+          <div />
+          <img src={Final5} />
+          <img src={Final6} />
+          <div />
+        </Styled.FinalGrid>
         <Styled.SectionDivider>REFLECTIONS + NEXT STEPS</Styled.SectionDivider>
+        <Styled.Reflections>
+          <Styled.SectionTitle>
+            My first experience undergoing the design process.
+          </Styled.SectionTitle>
+          <Text type="text-t5">
+            Being my first UX project, I got to experience the complete design
+            process for the first time. My biggest takeaways were:
+          </Text>
+          <Text type="text-t5">
+            <ol>
+              <li>
+                <b>
+                  The importance of user interviews and constant user feedback .
+                </b>{' '}
+                Many times I persuaded myself to wait for feedback once I had a
+                “good enough” working prototype. However, I soon realized how
+                invaluable feedback is at every stage of the design process.
+                Looking back, each interview and round of testing brought me new
+                insight about my users and gaps in my designs.
+              </li>
+              <li>
+                <b>Simplicity is key.</b> Users want to complete tasks with as
+                few obstacles and steps as possible. I discovered the importance
+                of minimizing the number of clicks it takes users to achieve a
+                goal, such as successfully ordering a menu item, without
+                sacrificing necessary functionalities needed to create an
+                easy-to-use, intuitive flow.
+              </li>
+              <li>
+                <b>The iterative-nature of design.</b> Designs are never really
+                complete after two or three iterations. Inevitably, they must be
+                handed off to engineers and brought to life, but they
+                continually evolve to meet new user needs. I learned to never be
+                fully satisfied with my end product and seek continuous
+                refinement.
+              </li>
+            </ol>
+          </Text>
+          <Styled.SectionTitle>
+            If I had more time, I would...
+          </Styled.SectionTitle>
+          <Text type="text-t5">
+            <ul>
+              <li>
+                <b>Conduct more usability tests.</b> Based on my #1 takeaway
+                from this project, I believe conducting more usability studies
+                would allow me to uncover new user pain points. In particular, I
+                would investigate the efficacy and intuitiveness of the Split
+                the Bill feature, which I added last to the app.
+              </li>
+              <li>
+                <b>
+                  Conduct interviews with real restaurant owners and workers.
+                </b>{' '}
+                I would like to understand what really goes on behind the scenes
+                in a restaurant, specifically the process of completing an order
+                from when it is received by the kitchen to when it reaches the
+                customer&apos;s table. Insights from restaurants would also
+                allow me to gauge the applicability of the app in the real
+                world.
+              </li>
+            </ul>
+          </Text>
+        </Styled.Reflections>
+        <Styled.SectionDivider>&nbsp;</Styled.SectionDivider>
+        <Styled.ThankYou>
+          <Text size={32} weight={700}>
+            Thank you for reading!
+          </Text>
+          <Text type="text-t4">
+            Reach out to me at{' '}
+            <Link href="mailto: megyuan@ucla.edu">megyuan@ucla.edu</Link> to
+            learn more and connect.
+          </Text>
+        </Styled.ThankYou>
       </Styled.Content>
       <Footer />
     </>
