@@ -284,6 +284,7 @@ export const IFrame = styled.iframe`
   width: 100%;
   height: 800px;
   margin-top: 50px;
+  border: 1px solid ${({ theme }) => theme.palette.border};
 `;
 
 export const Reflections = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import resume from '../files/meg_yuan_resume.pdf';
 import { Column, Icons, Row, Text } from '../ui';
 
 const Container = styled(Column)`
@@ -41,13 +42,21 @@ export const Footer = () => {
   return (
     <Container>
       <IconRow>
-        <Button>
+        <Button
+          href="mailto: megyuan@ucla.edu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icons.email />
         </Button>
-        <Button>
+        <Button
+          href="https://www.linkedin.com/in/megyuan/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icons.linkedIn />
         </Button>
-        <Button>
+        <Button href={resume} target="_blank" rel="noopener noreferrer">
           <Icons.pdf />
         </Button>
       </IconRow>

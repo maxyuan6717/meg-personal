@@ -3,6 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
+import resume from '../files/meg_yuan_resume.pdf';
 import Phone1 from '../images/dumpling-preview/phone1.png';
 import Phone2 from '../images/dumpling-preview/phone2.png';
 import Phone3 from '../images/dumpling-preview/phone3.png';
@@ -29,10 +30,18 @@ export const Home = () => {
             <Link href="mailto: megyuan@ucla.edu">megyuan@ucla.edu</Link>.
           </Text>
           <Styled.ButtonRow>
-            <Styled.Button>
+            <Styled.Button
+              href="https://www.linkedin.com/in/megyuan/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Icons.linkedIn />
             </Styled.Button>
-            <Styled.Button>
+            <Styled.Button
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Icons.pdf />
             </Styled.Button>
           </Styled.ButtonRow>
