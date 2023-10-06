@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import Chipotle from '../images/dumpling-case/chipotle.png';
 import Dominos from '../images/dumpling-case/dominos.jpeg';
 import Haidilao from '../images/dumpling-case/heidilao.jpeg';
+import Persona from '../images/dumpling-case/persona.png';
 import Sunright from '../images/dumpling-case/sunright.png';
 import Phone1 from '../images/dumpling-preview/phone1.png';
 import Phone2 from '../images/dumpling-preview/phone2.png';
@@ -95,7 +96,7 @@ export const Dumpling = () => {
               </Text>
               <div className="bg-number">1</div>
             </Styled.StepText>
-            <video width="410" height="auto" autoPlay loop muted>
+            <video width="360" height="auto" autoPlay loop muted>
               <source
                 src="videos/dumpling-case/solution1.mov"
                 type="video/mp4"
@@ -104,7 +105,7 @@ export const Dumpling = () => {
             </video>
           </Styled.Step>
           <Styled.Step>
-            <video width="410" height="auto" autoPlay loop muted>
+            <video width="360" height="auto" autoPlay loop muted>
               <source
                 src="videos/dumpling-case/solution2.mov"
                 type="video/mp4"
@@ -151,7 +152,7 @@ export const Dumpling = () => {
               </Text>
               <div className="bg-number">3</div>
             </Styled.StepText>
-            <video width="410" height="auto" autoPlay loop muted>
+            <video width="360" height="auto" autoPlay loop muted>
               <source
                 src="videos/dumpling-case/solution3.mov"
                 type="video/mp4"
@@ -253,7 +254,7 @@ export const Dumpling = () => {
               Dine-In
             </Text>
             <Text type="text-t4">
-              &ldquo;The Experience makes the meal&rdquo;
+              &ldquo;The experience makes the meal&rdquo;
             </Text>
             <Row>
               <Styled.InsightExampleColumn maxWidth={168}>
@@ -292,6 +293,77 @@ export const Dumpling = () => {
           </Styled.InsightColumn>
         </Styled.Insights>
         <Styled.SectionDivider>USER PERSONA</Styled.SectionDivider>
+        <Styled.PersonaSection>
+          <Styled.PersonaImage>
+            <img src={Persona} width="100%" height="auto" />
+            <div>
+              <Text type="text-t6" size={50} weight={700}>
+                Louise
+              </Text>
+              <Text type="text-t6" size={20} weight={700}>
+                24 | Grad Student
+              </Text>
+            </div>
+          </Styled.PersonaImage>
+          <Styled.PersonaText>
+            <Text type="text-t7" color="red" weight={600} italic>
+              “I&apos;m always looking for ways to maximize the use of my time.”
+            </Text>
+            <div>
+              <Text type="text-t6">About</Text>
+              <Text type="text-t7">
+                Hi! I&apos;m Louise, a graduate student studying Law at the
+                University of Pennsylvania. With my busy course schedule and
+                part-time barista job, I rarely have the time to cook for
+                myself. I often order takeout out of convenience because I can
+                easily order from my phone and pick up the food on the way home
+                from school or work. Sometimes I like to eat in at restaurants
+                on the weekends to treat myself or catch up with a friend, but
+                it always takes up a good chunk of time. I&apos;m a huge foodie,
+                and I wish I had the time to try more restaurants in-person.
+              </Text>
+            </div>
+            <div>
+              <Text type="text-t6">Goals</Text>
+              <Text type="text-t7">
+                <ul>
+                  <li>Achieve a good work-life balance</li>
+                  <li>
+                    Spend as little time as possible thinking about and
+                    preparing meals
+                  </li>
+                  <li>Try new cuisines</li>
+                </ul>
+              </Text>
+            </div>
+            <div>
+              <Text type="text-t6">Motivations</Text>
+              <Text type="text-t7">
+                <ul>
+                  <li>Excel at school and maintain social life</li>
+                  <li>Reduce daily stress around food</li>
+                  <li>Experience different cultures by expanding palette</li>
+                </ul>
+              </Text>
+            </div>
+            <div>
+              <Text type="text-t6">Frustrations</Text>
+              <Text type="text-t7">
+                <ul>
+                  <li>Cooking for one is inefficient </li>
+                  <li>
+                    Sometimes online orders are wrong or the food is cold when
+                    picking up
+                  </li>
+                  <li>
+                    Could better use the time spent waiting for food to arrive
+                    when dining in
+                  </li>
+                </ul>
+              </Text>
+            </div>
+          </Styled.PersonaText>
+        </Styled.PersonaSection>
         <Styled.SectionDivider>TESTING + ITERATING</Styled.SectionDivider>
         <Styled.SectionTitle>3 major areas of improvement</Styled.SectionTitle>
         <Text type="text-t5">
@@ -299,11 +371,126 @@ export const Dumpling = () => {
           several iterations to my design with a focus on 3 key aspects of the
           ordering flow:
         </Text>
+        <Styled.Steps marginTop={100}>
+          <Styled.Step gap={100}>
+            <Styled.ImprovementVideos>
+              <PlayPauseVideo src="videos/dumpling-case/improve1-1.mov" />
+              <Icons.rightArrow />
+              <PlayPauseVideo src="videos/dumpling-case/improve1-2.mov" />
+            </Styled.ImprovementVideos>
+            <Styled.StepText maxWidth={465}>
+              <Text type="text-t2" weight={700}>
+                Simplify the send-to-kitchen process
+              </Text>
+              <Text type="text-t5">
+                <ul>
+                  <li>
+                    Earliest iterations contained multiple confirmation screens
+                    before sending an item to the kitchen, which was tedious and
+                    unnecessary
+                  </li>
+                  <li>
+                    Reduced the number of ordering steps by allowing users to
+                    add as many items to the cart before directly sending them
+                    to the kitchen through the cart
+                  </li>
+                </ul>
+              </Text>
+              <div className="bg-number">1</div>
+            </Styled.StepText>
+          </Styled.Step>
+          <Styled.Step gap={100}>
+            <Styled.StepText maxWidth={465}>
+              <Text type="text-t2" weight={700}>
+                Expand the cart preview functionality
+              </Text>
+              <Text type="text-t5">
+                <ul>
+                  <li>
+                    Replaced the previous system of multiple rounds of orders
+                    with a simplified add-to-cart process
+                  </li>
+                  <li>
+                    Adjust an item&apos;s quantity before sending to the
+                    kitchen, track the status of all ordered items, & quickly
+                    reorder items all within the cart
+                  </li>
+                  <li>
+                    Moved the cart icon from the top right corner of the screen
+                    to the center of the navigation bar for easy access
+                  </li>
+                </ul>
+              </Text>
+              <div className="bg-number">2</div>
+            </Styled.StepText>
+            <Styled.ImprovementVideos>
+              <PlayPauseVideo src="videos/dumpling-case/improve2-1.mov" />
+              <Icons.rightArrow />
+              <PlayPauseVideo src="videos/dumpling-case/improve2-2.mov" />
+            </Styled.ImprovementVideos>
+          </Styled.Step>
+          <Styled.Step gap={100}>
+            <Styled.ImprovementVideos>
+              <PlayPauseVideo src="videos/dumpling-case/improve3-1.mov" />
+              <Icons.rightArrow />
+              <PlayPauseVideo src="videos/dumpling-case/improve3-2.mov" />
+            </Styled.ImprovementVideos>
+            <Styled.StepText maxWidth={465}>
+              <Text type="text-t2" weight={700}>
+                Add consistent reminders to guide action
+              </Text>
+              <Text type="text-t5">
+                <ul>
+                  <li>
+                    Testing revealed hesitations over how to proceed after
+                    adding items to the cart and after receiving all ordered
+                    items
+                  </li>
+                  <li>
+                    Banner notification after adding an item to the cart reminds
+                    customers to send orders to the kitchen
+                  </li>
+                  <li>
+                    Banner notification once all ordered items have arrived
+                    reminds customers to advance to checkout once ready
+                  </li>
+                </ul>
+              </Text>
+              <div className="bg-number">3</div>
+            </Styled.StepText>
+          </Styled.Step>
+        </Styled.Steps>
         <Styled.SectionDivider>FINAL PRODUCT</Styled.SectionDivider>
         <Styled.SectionTitle>The final design</Styled.SectionTitle>
         <Styled.SectionDivider>REFLECTIONS + NEXT STEPS</Styled.SectionDivider>
       </Styled.Content>
       <Footer />
     </>
+  );
+};
+
+const PlayPauseVideo = ({ src }) => {
+  const [playing, setPlaying] = useState(false);
+  const vidRef = useRef(null);
+
+  return (
+    <Styled.PlayPauseVideo
+      width="243"
+      height="auto"
+      loop
+      muted
+      ref={vidRef}
+      onClick={() => {
+        if (playing) {
+          vidRef.current.pause();
+        } else {
+          vidRef.current.play();
+        }
+        setPlaying(!playing);
+      }}
+    >
+      <source src={src} type="video/mp4" />
+      Your browser does not support the video tag.
+    </Styled.PlayPauseVideo>
   );
 };

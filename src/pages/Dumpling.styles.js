@@ -83,7 +83,7 @@ export const ProblemQuestion = styled(Text)`
 `;
 
 export const Steps = styled.div`
-  margin-top: 65px;
+  margin-top: ${({ marginTop = 65 }) => marginTop}px;
   > :not(:first-child) {
     margin-top: 150px;
   }
@@ -92,13 +92,13 @@ export const Steps = styled.div`
 export const Step = styled(Row)`
   justify-content: center;
   > :first-child {
-    margin-right: 120px;
+    margin-right: ${({ gap = 120 }) => gap}px;
   }
 `;
 
 export const StepText = styled.div`
   position: relative;
-  max-width: 443px;
+  max-width: ${({ maxWidth = 443 }) => maxWidth}px;
 
   ul {
     margin-top: 15px;
@@ -198,4 +198,72 @@ export const InsightDivider = styled.div`
   height: 100%;
   background-color: ${({ theme }) =>
     Color.makeHexTranslucent(theme.palette.red, 0.1)};
+`;
+
+export const PersonaSection = styled.div`
+  width: unset !important;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 370px 560px;
+  column-gap: 32px;
+`;
+
+export const PersonaImage = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  > div {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+`;
+
+export const PersonaText = styled.div`
+  > :first-child {
+    text-align: center;
+  }
+
+  > :nth-child(2) {
+    > :first-child {
+      margin-bottom: 6px;
+    }
+  }
+
+  > :not(:first-child) {
+    margin-top: 10px;
+  }
+
+  ul {
+    margin-top: 2px;
+    margin-left: 10px;
+
+    > :not(:first-child) {
+      margin-top: 4px;
+    }
+  }
+`;
+
+export const PlayPauseVideo = styled.video`
+  cursor: pointer;
+`;
+
+export const ImprovementVideos = styled(Row)`
+  position: relative;
+  svg {
+    width: 60px;
+    height: 60px;
+    fill: ${({ theme }) => theme.palette.red};
+  }
+
+  &::after {
+    content: 'Click to play/pause';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 12px);
+    color: ${({ theme }) => theme.palette['secondary-light']};
+    font-size: 20px;
+  }
 `;
