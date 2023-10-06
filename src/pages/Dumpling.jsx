@@ -2,16 +2,20 @@ import React, { useEffect } from 'react';
 
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
+import Chipotle from '../images/dumpling-case/chipotle.png';
+import Dominos from '../images/dumpling-case/dominos.jpeg';
+import Haidilao from '../images/dumpling-case/heidilao.jpeg';
+import Sunright from '../images/dumpling-case/sunright.png';
 import Phone1 from '../images/dumpling-preview/phone1.png';
 import Phone2 from '../images/dumpling-preview/phone2.png';
 import Phone3 from '../images/dumpling-preview/phone3.png';
-import { Text } from '../ui';
+import { Column, Icons, Row, Text } from '../ui';
 
 import * as Styled from './Dumpling.styles';
 
 export const Dumpling = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, []);
   return (
     <>
@@ -68,7 +72,7 @@ export const Dumpling = () => {
           All-in-one mobile restaurant app for ordering, tracking, and paying.
         </Styled.SectionTitle>
         <Text type="text-t5">
-          Combining the <b>convenience and accessibility</b> of takeout with the
+          Combining the <b>convenience and accessibility</b> of takeout with the{' '}
           <b>quality and freshness</b> of eating in to create an{' '}
           <b>elevated dine-in experience</b> for a fictional casual authentic
           Chinese restaurant, Dumpling Delight.
@@ -168,6 +172,32 @@ export const Dumpling = () => {
           option and an order status tracking feature when dining in. I saw this
           as an opportunity to combine the best of both worlds.
         </Text>
+        <Styled.Restaurants>
+          <Column>
+            <img src={Haidilao} />
+            <Text typ="text-t5" weight={700}>
+              Haidilao
+            </Text>
+          </Column>
+          <Column>
+            <img src={Sunright} />
+            <Text typ="text-t5" weight={700}>
+              Sunright Tea Studio
+            </Text>
+          </Column>
+          <Column>
+            <img src={Dominos} />
+            <Text typ="text-t5" weight={700}>
+              Domino&apos;s
+            </Text>
+          </Column>
+          <Column>
+            <img src={Chipotle} />
+            <Text typ="text-t5" weight={700}>
+              Chiptole
+            </Text>
+          </Column>
+        </Styled.Restaurants>
         <Styled.SectionDivider>USER INTERVIEWS</Styled.SectionDivider>
         <Styled.SectionTitle>
           Interviewees favored both dining in and taking out—but for separate
@@ -194,6 +224,19 @@ export const Dumpling = () => {
             </li>
           </Styled.UserInterviewsList>
         </Text>
+        <Styled.UserInterviewVideo
+          width="100%"
+          height="auto"
+          autoPlay
+          loop
+          muted
+        >
+          <source
+            src="videos/dumpling-case/user-interview.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </Styled.UserInterviewVideo>
         <Styled.SectionDivider>MAJOR INSIGHTS</Styled.SectionDivider>
         <Styled.SectionTitle>
           Busy individuals prioritize convenience but still value the social
@@ -204,6 +247,50 @@ export const Dumpling = () => {
           themes that defined the dine-in and takeout experiences. It then
           became my goal to marry the benefits of the two.
         </Text>
+        <Styled.Insights>
+          <Styled.InsightColumn>
+            <Text type="text-t2" weight={500}>
+              Dine-In
+            </Text>
+            <Text type="text-t4">
+              &ldquo;The Experience makes the meal&rdquo;
+            </Text>
+            <Row>
+              <Styled.InsightExampleColumn maxWidth={168}>
+                <Icons.insight1 width={90} />
+                <Text type="text-t5" weight={500}>
+                  Better food quality & presentation
+                </Text>
+              </Styled.InsightExampleColumn>
+              <Styled.InsightExampleColumn maxWidth={244}>
+                <Icons.insight2 width={67} />
+                <Text type="text-t5" weight={500}>
+                  Socialization & celebration of special occasions
+                </Text>
+              </Styled.InsightExampleColumn>
+            </Row>
+          </Styled.InsightColumn>
+          <Styled.InsightColumn>
+            <Text type="text-t2" weight={500}>
+              Takeout
+            </Text>
+            <Text type="text-t4">&ldquo;Convenience above all&rdquo;</Text>
+            <Row>
+              <Styled.InsightExampleColumn maxWidth={222}>
+                <Icons.insight3 width={85} />
+                <Text type="text-t5" weight={500}>
+                  More expansive online menus with useful features
+                </Text>
+              </Styled.InsightExampleColumn>
+              <Styled.InsightExampleColumn maxWidth={182}>
+                <Icons.insight4 width={85} />
+                <Text type="text-t5" weight={500}>
+                  Expedited ordering process saves time
+                </Text>
+              </Styled.InsightExampleColumn>
+            </Row>
+          </Styled.InsightColumn>
+        </Styled.Insights>
         <Styled.SectionDivider>USER PERSONA</Styled.SectionDivider>
         <Styled.SectionDivider>TESTING + ITERATING</Styled.SectionDivider>
         <Styled.SectionTitle>3 major areas of improvement</Styled.SectionTitle>

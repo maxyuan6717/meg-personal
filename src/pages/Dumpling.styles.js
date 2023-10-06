@@ -82,15 +82,6 @@ export const ProblemQuestion = styled(Text)`
   }
 `;
 
-export const UserInterviewsList = styled.ol`
-  margin-top: 15px;
-  margin-left: 10px;
-
-  > :not(:first-child) {
-    margin-top: 10px;
-  }
-`;
-
 export const Steps = styled.div`
   margin-top: 65px;
   > :not(:first-child) {
@@ -101,7 +92,7 @@ export const Steps = styled.div`
 export const Step = styled(Row)`
   justify-content: center;
   > :first-child {
-    margin-right: 100px;
+    margin-right: 120px;
   }
 `;
 
@@ -129,4 +120,82 @@ export const StepText = styled.div`
     color: ${({ theme }) => theme.palette.red};
     opacity: 0.07;
   }
+`;
+
+export const Restaurants = styled(Row)`
+  margin-top: 30px;
+  justify-content: center;
+  > :not(:first-child) {
+    margin-left: 60px;
+  }
+
+  > ${Column} {
+    max-width: 140px;
+
+    > img {
+      width: 140px;
+      height: 140px;
+      border-radius: 25px;
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+      margin-bottom: 12px;
+    }
+
+    > ${Text} {
+      text-align: center;
+    }
+  }
+`;
+
+export const UserInterviewsList = styled.ol`
+  margin-top: 15px;
+  margin-left: 10px;
+
+  > :not(:first-child) {
+    margin-top: 10px;
+  }
+`;
+
+export const UserInterviewVideo = styled.video`
+  margin-top: 80px;
+`;
+
+export const Insights = styled(Row)`
+  justify-content: center;
+  margin-top: 72px;
+  position: relative;
+
+  > * {
+    padding: 0 25px;
+  }
+
+  > :first-child {
+    border-right: 5px solid
+      ${({ theme }) => Color.makeHexTranslucent(theme.palette.red, 0.1)};
+  }
+
+  ${Text} {
+    text-align: center;
+  }
+`;
+
+export const InsightColumn = styled(Column)`
+  > :last-child {
+    margin-top: 40px;
+    width: 460px;
+    height: 185px;
+    justify-content: space-between;
+  }
+`;
+
+export const InsightExampleColumn = styled(Column)`
+  justify-content: space-between;
+  ${({ maxWidth }) => (maxWidth ? `max-width: ${maxWidth}px;` : '')}
+  height: 100%;
+`;
+
+export const InsightDivider = styled.div`
+  width: 5px;
+  height: 100%;
+  background-color: ${({ theme }) =>
+    Color.makeHexTranslucent(theme.palette.red, 0.1)};
 `;
