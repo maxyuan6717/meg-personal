@@ -57,7 +57,9 @@ export const Navbar = () => {
   return (
     <Container>
       <Link to="/">
-        <Text type="display-h2">MWY</Text>
+        <Text type="display-h2" color="off-black">
+          MWY
+        </Text>
       </Link>
       <Link to="/">
         <NavLink type="text-t4" selected={pathname === '/'}>

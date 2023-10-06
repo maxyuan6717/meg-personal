@@ -348,7 +348,7 @@ export const Dumpling = () => {
                 <ul>
                   <li>Excel at school and maintain social life</li>
                   <li>Reduce daily stress around food</li>
-                  <li>Experience different cultures by expanding palette</li>
+                  <li>Experience different cultures by expanding palate</li>
                 </ul>
               </Text>
             </div>
@@ -495,7 +495,7 @@ export const Dumpling = () => {
             <ol>
               <li>
                 <b>
-                  The importance of user interviews and constant user feedback .
+                  The importance of user interviews and constant user feedback.
                 </b>{' '}
                 Many times I persuaded myself to wait for feedback once I had a
                 “good enough” working prototype. However, I soon realized how
@@ -538,7 +538,7 @@ export const Dumpling = () => {
                   Conduct interviews with real restaurant owners and workers.
                 </b>{' '}
                 I would like to understand what really goes on behind the scenes
-                in a restaurant, specifically the process of completing an order
+                at a restaurant, specifically the process of completing an order
                 from when it is received by the kitchen to when it reaches the
                 customer&apos;s table. Insights from restaurants would also
                 allow me to gauge the applicability of the app in the real
