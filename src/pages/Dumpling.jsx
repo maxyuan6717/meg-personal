@@ -478,6 +478,10 @@ export const Dumpling = () => {
           <img src={Final6} />
           <div />
         </Styled.FinalGrid>
+        <Styled.IFrame
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FFbNKscKIuCFoyILERRtdZi%2Fmobile-app%253A-Dumpling-Delight%3Ftype%3Ddesign%26node-id%3D1023-10542%26t%3DqxouwEeplEYIKI2o-1%26scaling%3Dscale-down%26page-id%3D1023%253A10502%26starting-point-node-id%3D1023%253A10503%26mode%3Ddesign"
+          allowFullScreen
+        />
         <Styled.SectionDivider>REFLECTIONS + NEXT STEPS</Styled.SectionDivider>
         <Styled.Reflections>
           <Styled.SectionTitle>

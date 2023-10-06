@@ -280,6 +280,12 @@ export const FinalGrid = styled.div`
   }
 `;
 
+export const IFrame = styled.iframe`
+  width: 100%;
+  height: 800px;
+  margin-top: 50px;
+`;
+
 export const Reflections = styled.div`
   > :not(:first-child) {
     margin-top: 30px;
