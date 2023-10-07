@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   BrowserRouter as Router,
   Navigate,
@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
+import { useDimensions } from './hooks/useDimensions';
 import { About, Dumpling, Home } from './pages';
 import { base, GlobalStyle } from './ui';
 
@@ -17,14 +18,24 @@ const Container = styled.div`
   max-width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+
+  zoom: ${({ scale }) => scale};
 `;
 
 function App() {
+  const { width } = useDimensions();
+
+  const scale = useMemo(() => {
+    if (width < 1200) {
+      return width / 1200;
+    }
+    return 1;
+  }, [width]);
   return (
     <Router>
       <ThemeProvider theme={base}>
         <GlobalStyle />
-        <Container>
+        <Container scale={scale}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
