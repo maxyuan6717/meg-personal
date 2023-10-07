@@ -206,7 +206,7 @@ export const PersonaSection = styled.div`
 
 export const PersonaImage = styled.div`
   width: 100%;
-  height: 100%;
+  height: fit-content;
   position: relative;
 
   > div {
