@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
+import FadeInSection from '../components/FadeInSection';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import { ScrollUp } from '../components/ScrollUp';
@@ -78,27 +79,29 @@ export const Home = () => {
         </Styled.MyWorkContainer>
       </Styled.Splash>
       <Styled.WorksContainer>
-        <RouterLink to="dumpling-delight">
-          <Styled.Work>
-            <Row>
-              <div>
-                <Text type="cursive-c2" color="white" lineHeight={80}>
-                  DUMPLING
-                  <br />
-                  DELIGHT
-                </Text>
-                <Text type="text-t3" color="white">
-                  Enhancing the dine-in
-                  <br />
-                  ordering experience.
-                </Text>
-              </div>
-              <Styled.Phone src={Phone1} />
-              <Styled.Phone src={Phone2} />
-              <Styled.Phone src={Phone3} />
-            </Row>
-          </Styled.Work>
-        </RouterLink>
+        <FadeInSection>
+          <RouterLink to="dumpling-delight">
+            <Styled.Work>
+              <Row>
+                <div>
+                  <Text type="cursive-c2" color="white" lineHeight={80}>
+                    DUMPLING
+                    <br />
+                    DELIGHT
+                  </Text>
+                  <Text type="text-t3" color="white">
+                    Enhancing the dine-in
+                    <br />
+                    ordering experience.
+                  </Text>
+                </div>
+                <Styled.Phone src={Phone1} />
+                <Styled.Phone src={Phone2} />
+                <Styled.Phone src={Phone3} />
+              </Row>
+            </Styled.Work>
+          </RouterLink>
+        </FadeInSection>
         <Footer />
         <ScrollUp />
       </Styled.WorksContainer>
