@@ -155,10 +155,6 @@ export const UserInterviewsList = styled.ol`
   }
 `;
 
-export const UserInterviewVideo = styled.video`
-  margin-top: 80px;
-`;
-
 export const Insights = styled(Row)`
   justify-content: center;
   margin-top: 72px;

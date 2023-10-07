@@ -103,22 +103,16 @@ export const Dumpling = () => {
               </Text>
               <div className="bg-number">1</div>
             </Styled.StepText>
-            <video width="360" height="auto" autoPlay loop muted>
-              <source
-                src="videos/dumpling-case/solution1.mov"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+            <PlayWhenVisibleVideo
+              width="360"
+              src="videos/dumpling-case/solution1.mov"
+            />
           </Styled.Step>
           <Styled.Step>
-            <video width="360" height="auto" autoPlay loop muted>
-              <source
-                src="videos/dumpling-case/solution2.mov"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+            <PlayWhenVisibleVideo
+              width="360"
+              src="videos/dumpling-case/solution2.mov"
+            />
             <Styled.StepText>
               <Text type="text-t2" weight={700}>
                 Tracking
@@ -159,13 +153,10 @@ export const Dumpling = () => {
               </Text>
               <div className="bg-number">3</div>
             </Styled.StepText>
-            <video width="360" height="auto" autoPlay loop muted>
-              <source
-                src="videos/dumpling-case/solution3.mov"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+            <PlayWhenVisibleVideo
+              width="360"
+              src="videos/dumpling-case/solution3.mov"
+            />
           </Styled.Step>
         </Styled.Steps>
         <Styled.SectionDivider>COMPETITIVE ANALYSIS</Styled.SectionDivider>
@@ -232,19 +223,11 @@ export const Dumpling = () => {
             </li>
           </Styled.UserInterviewsList>
         </Text>
-        <Styled.UserInterviewVideo
+        <PlayWhenVisibleVideo
           width="100%"
-          height="auto"
-          autoPlay
-          loop
-          muted
-        >
-          <source
-            src="videos/dumpling-case/user-interview.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </Styled.UserInterviewVideo>
+          src="videos/dumpling-case/user-interview.mp4"
+          marginTop={80}
+        />
         <Styled.SectionDivider>MAJOR INSIGHTS</Styled.SectionDivider>
         <Styled.SectionTitle>
           Busy individuals prioritize convenience but still value the social
@@ -563,6 +546,50 @@ export const Dumpling = () => {
       <Footer />
       <ScrollUp />
     </>
+  );
+};
+
+const PlayWhenVisibleVideo = ({ width, src, marginTop }) => {
+  const vidRef = useRef(null);
+
+  const callbackFunction = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && vidRef.current && vidRef.current.paused)
+        vidRef.current.play();
+    });
+  };
+
+  useEffect(() => {
+    const node = vidRef.current;
+    const observer = new IntersectionObserver(callbackFunction, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    });
+    if (node) observer.observe(node);
+    return () => {
+      if (node) observer.unobserve(node);
+    };
+  }, [vidRef]);
+
+  return (
+    <video
+      width={width}
+      height="auto"
+      loop
+      muted
+      ref={vidRef}
+      {...(marginTop
+        ? {
+            style: {
+              marginTop
+            }
+          }
+        : {})}
+    >
+      <source src={src} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   );
 };
 
