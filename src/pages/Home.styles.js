@@ -50,7 +50,10 @@ export const Button = styled.a`
 
 export const MyWorkContainer = styled(Column)`
   margin: auto auto 30px auto;
+  opacity: ${({ fade }) => 1 - fade};
+  cursor: pointer;
 `;
+
 // animation to bob arrow up and down
 const bob = keyframes`
   0% {

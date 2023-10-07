@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import { ScrollUp } from '../components/ScrollUp';
 import resume from '../files/meg_yuan_resume.pdf';
+import { useDimensions } from '../hooks/useDimensions';
 import Phone1 from '../images/dumpling-preview/phone1.png';
 import Phone2 from '../images/dumpling-preview/phone2.png';
 import Phone3 from '../images/dumpling-preview/phone3.png';
@@ -12,7 +13,29 @@ import { Icons, Link, Row, Text } from '../ui';
 
 import * as Styled from './Home.styles';
 
+const round = (x) => 5 * Math.floor(x / 5);
+
 export const Home = () => {
+  const { height } = useDimensions();
+  const [myWorkFade, setMyWorkFade] = useState(0);
+
+  useEffect(() => {
+    const fadeOnScroll = () => {
+      // decrement opacity by 5% every 5% of height scrolled
+      const opacity =
+        round(100 * Math.max(0, window.scrollY / (height * 0.8))) / 100;
+      setMyWorkFade(opacity);
+    };
+    window.addEventListener('scroll', fadeOnScroll);
+    return () => window.removeEventListener('scroll', fadeOnScroll);
+  }, [height]);
+
+  const scrollToWorks = () =>
+    window.scrollTo({
+      top: height,
+      behavior: 'smooth'
+    });
+
   return (
     <>
       <Styled.Splash>
@@ -47,7 +70,7 @@ export const Home = () => {
             </Styled.Button>
           </Styled.ButtonRow>
         </Styled.SplashContent>
-        <Styled.MyWorkContainer>
+        <Styled.MyWorkContainer onClick={scrollToWorks} fade={myWorkFade}>
           <Text type="text-t3">my work</Text>
           <Styled.DownArrow>
             <Icons.downArrow />
