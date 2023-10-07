@@ -10,7 +10,7 @@ const Container = styled.div`
   bottom: 32px;
   right: 20px;
 
-  transition: opacity 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   opacity: ${({ show }) => (show ? 1 : 0)};
   pointer-events: ${({ show }) => (show ? 'all' : 'none')};
 
@@ -18,6 +18,14 @@ const Container = styled.div`
     width: 55px;
     height: 55px;
     fill: ${({ theme }) => theme.palette.secondary};
+    transition: fill 0.2s;
+  }
+
+  &:hover {
+    svg {
+      fill: ${({ theme }) => theme.palette.blue};
+    }
+    transform: translateY(-10px);
   }
 `;
 
