@@ -3,6 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
+import { ScrollUp } from '../components/ScrollUp';
 import resume from '../files/meg_yuan_resume.pdf';
 import Phone1 from '../images/dumpling-preview/phone1.png';
 import Phone2 from '../images/dumpling-preview/phone2.png';
@@ -76,6 +77,7 @@ export const Home = () => {
           </Styled.Work>
         </RouterLink>
         <Footer />
+        <ScrollUp />
       </Styled.WorksContainer>
     </>
   );

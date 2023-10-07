@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
+import { ScrollUp } from '../components/ScrollUp';
 import Chipotle from '../images/dumpling-case/chipotle.png';
 import Dominos from '../images/dumpling-case/dominos.jpeg';
 import Final1 from '../images/dumpling-case/final1.png';
@@ -560,6 +561,7 @@ export const Dumpling = () => {
         </Styled.ThankYou>
       </Styled.Content>
       <Footer />
+      <ScrollUp />
     </>
   );
 };
