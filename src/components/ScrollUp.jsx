@@ -27,7 +27,7 @@ export const ScrollUp = () => {
 
   useEffect(() => {
     const scrollUp = () => {
-      if (window.scrollY > height) {
+      if (window.scrollY >= height) {
         setShow(true);
       } else {
         setShow(false);
