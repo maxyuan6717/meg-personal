@@ -4,6 +4,10 @@ import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import { ScrollUp } from '../components/ScrollUp';
 import CompetitorLogos from '../images/clearify-case/competitor_logos.png';
+import Insight1a from '../images/clearify-case/insight1a.png';
+import Insight1b from '../images/clearify-case/insight1b.png';
+import Insight2 from '../images/clearify-case/insight2.png';
+import Insight3 from '../images/clearify-case/insight3.png';
 import Computer from '../images/clearify-preview/computer.png';
 import ClearifyLogo from '../images/clearify-preview/logo.png';
 import { Column, Row, Text } from '../ui';
@@ -137,6 +141,100 @@ export const Clearify = () => {
         <Text type="text-t5">
           We conducted a survey to better gauge users&apos; skincare shopping
           behaviors and needs, receiving 22 responses from university students.
+        </Text>
+        <Styled.InsightsGrid>
+          <Styled.Insight>
+            <Text size={28} weight={700}>
+              Insight #1
+            </Text>
+            <Text type="text-t5">
+              Half of respondents (50%) find it moderately important to know
+              product ingredients (rated 4 out of 5), yet over half (54.5%)
+              rated the ease of understanding the impact of ingredients as a 1
+              or 2 out of 5, indicating an{' '}
+              <span className="highlight">educational gap</span> in how
+              ingredient effects are communicated to users.
+            </Text>
+            <Styled.Blob color="#FF9A24" />
+          </Styled.Insight>
+          <Column>
+            <img src={Insight1a} alt="Insight 1a" width={450} height="auto" />
+            <img src={Insight1b} alt="Insight 1b" width={450} height="auto" />
+          </Column>
+          <img src={Insight2} alt="Insight 2" width={450} height="auto" />
+          <Styled.Insight>
+            <Text size={28} weight={700}>
+              Insight #2
+            </Text>
+            <Text type="text-t5">
+              Common skincare concerns are moisturizing (72.7%), acne-fighting
+              (63.6%), and UV protecting (63.6%). Respondents also highlighted
+              the importance of finding products with clean, non-harsh
+              ingredients that are{' '}
+              <span className="highlight">
+                compatible with their skin types
+              </span>{' '}
+              (e.g. dry, sensitive, oily).
+            </Text>
+            <Styled.Blob color="#A4D259" />
+          </Styled.Insight>
+          <Styled.Insight>
+            <Text size={28} weight={700}>
+              Insight #3
+            </Text>
+            <Text type="text-t5">
+              Most users have not used apps or extensions to find skincare,
+              relying mainly on <span className="highlight">social media</span>{' '}
+              and <span className="highlight">word of mouth</span> for reviews
+              and recommendations of skincare products.
+            </Text>
+            <Styled.Blob color="#93D3EE" />
+          </Styled.Insight>
+          <Row justify="center">
+            <img src={Insight3} alt="Insight 3" width={350} height="auto" />
+          </Row>
+        </Styled.InsightsGrid>
+        <Styled.SectionDivider>DESIGN SYSTEM</Styled.SectionDivider>
+        <Styled.SectionTitle>
+          Unifying style to build a minimalist, cohesive brand identity.
+        </Styled.SectionTitle>
+        <Text type="text-t5">
+          The design system features a calming shade of green paired with
+          simplistic typography to emphasize Clearify&apos;s mission of
+          providing reliable and easily understandable cosmetics reports. The
+          background textured gradient fuses together hues of green with warm
+          shades of yellow to create an inviting look. The holistic minimalist
+          aesthetic pushes forth the idea of simplifying skincare shopping.
+        </Text>
+        <Styled.SectionDivider>TESTING + ITERATING</Styled.SectionDivider>
+        <Text type="text-t5">
+          The evolution of our design was based on user survey responses and
+          usability testing within our team due to the short timespan. However,
+          the quick turnaround of feedback allowed us to iterate continuously
+          and thus craft a more intuitive and seamless user experience.
+        </Text>
+        <Styled.SectionDivider>FINAL PRODUCT</Styled.SectionDivider>
+        <Styled.SectionTitle>The final design</Styled.SectionTitle>
+        <Styled.SectionDivider>REFLECTIONS + NEXT STEPS</Styled.SectionDivider>
+        <Styled.SectionTitle>
+          Keeping an open mind and staying flexible.
+        </Styled.SectionTitle>
+        <Text type="text-t5">
+          Given the limited time frame, this project required flexibility and
+          open-mindedness to address the constant flow of feedback from the
+          team. The fast-paced setting taught me to iterate rapidly and
+          efficiently. I also gained a newfound appreciation for the power of
+          close collaboration.
+          <br />
+          <br />
+          With more time, I would incorporate even greater personalization into
+          the extension. A skincare quiz before utilizing the extension would
+          allow users to further specify their skincare concerns. In turn, the
+          extension would carefully curate product breakdowns that address
+          users&apos; needs by highlighting specific ingredients to avoid or
+          look out for. Implementing a comparison feature could streamline the
+          research process even more by allowing users to contrast two skincare
+          products at once.
         </Text>
       </Styled.Content>
       <Footer />

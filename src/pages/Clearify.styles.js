@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { ReactComponent as _Blob } from '../images/clearify-case/blob.svg';
 import { Column, Row } from '../ui';
 import { Color } from '../util';
 
@@ -86,4 +86,38 @@ export const CompetitorCols = styled.div`
     font: ${({ theme }) => theme.textStyles.desktop['text-t5']};
     margin-top: 8px;
   }
+`;
+
+export const InsightsGrid = styled.div`
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 450px);
+  column-gap: 30px;
+  row-gap: 90px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Insight = styled.div`
+  position: relative;
+  max-width: 438px;
+
+  > :first-child {
+    margin-bottom: 5px;
+  }
+
+  .highlight {
+    color: ${({ theme }) => theme.palette.green};
+    font-weight: 700;
+  }
+`;
+
+export const Blob = styled(_Blob)`
+  fill: ${({ color }) => color};
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 `;
