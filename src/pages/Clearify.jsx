@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
+import { PlayWhenVisibleVideo } from '../components/PlayWhenVisibleVideo';
 import { ScrollUp } from '../components/ScrollUp';
 import CircleLogo1 from '../images/clearify-case/circle_logo1.png';
 import CircleLogo2 from '../images/clearify-case/circle_logo2.png';
@@ -14,7 +15,6 @@ import InputScreens from '../images/clearify-case/input_screens.png';
 import Insight1a from '../images/clearify-case/insight1a.png';
 import Insight1b from '../images/clearify-case/insight1b.png';
 import Insight2 from '../images/clearify-case/insight2.png';
-import { PlayWhenVisibleVideo } from '../components/PlayWhenVisibleVideo';
 import Insight3 from '../images/clearify-case/insight3.png';
 import LogoGreen from '../images/clearify-case/logo_green.png';
 import OutputScreens from '../images/clearify-case/output_screens.png';
