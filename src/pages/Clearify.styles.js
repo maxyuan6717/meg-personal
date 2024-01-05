@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { ReactComponent as _Blob } from '../images/clearify-case/blob.svg';
-import { Column, Row } from '../ui';
+import { Column, Row, Text } from '../ui';
 import { Color } from '../util';
 
 export const Header = styled(Row)`
@@ -121,4 +121,146 @@ export const Blob = styled(_Blob)`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+`;
+
+export const DesignSystem = styled.div`
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 80px;
+`;
+
+export const DesignSystemCol = styled.div`
+  > :not(:first-child) {
+    margin-top: 20px;
+  }
+  position: relative;
+`;
+
+export const DesignSystemHeader = styled(Text)`
+  padding-bottom: 10px;
+  width: 100%;
+  border-bottom: 1px solid ${({ theme }) => theme.palette.border};
+  margin-bottom: 24px;
+`;
+
+export const Typography = styled.div`
+  > :first-child {
+    margin-bottom: 4px;
+  }
+`;
+
+export const ColorRow = styled.div`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 19px;
+  align-items: center;
+`;
+
+export const ColorSquare = styled.div`
+  width: 40px;
+  height: 40px;
+  background-color: ${({ color }) => color};
+`;
+
+export const SpacingGrid = styled.div`
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 18px;
+  row-gap: 32px;
+  align-items: center;
+`;
+
+export const SpacingSquare = styled.div`
+  width: ${({ size }) => size}px;
+  height: ${({ size }) => size}px;
+  border: 1px solid #285319;
+  background-color: #e3ffe9;
+  margin-left: auto;
+`;
+
+export const Iconography = styled.img`
+  position: absolute;
+  width: 245px;
+  height: auto;
+  top: 26px;
+`;
+
+export const Logos = styled(Row)`
+  margin-top: 40px;
+  > :first-child {
+    margin-right: 35px;
+  }
+
+  > :last-child {
+    margin-left: 18px;
+  }
+`;
+
+export const WordLogo = styled.img`
+  width: 276px;
+`;
+
+export const CircleLogo = styled.img`
+  width: 70px;
+`;
+
+export const CircleLogos = styled(Row)`
+  margin-top: 12px;
+  > :not(:first-child) {
+    margin-left: 15px;
+  }
+`;
+
+export const SquareLogo = styled.img`
+  width: 169px;
+`;
+
+export const InputScreens = styled.img`
+  width: 855px;
+  margin: 32px 0 54px 0;
+`;
+
+export const OutputScreens = styled.img`
+  width: 1027px;
+  margin-top: 32px 0 54px 0;
+`;
+
+export const OutputConcerns = styled.ol`
+  margin-top: 8px;
+  margin-left: 10px;
+  font-weight: bold;
+
+  > :not(:first-child) {
+    margin-top: 10px;
+  }
+
+  span {
+    font-weight: normal;
+  }
+`;
+
+export const Enhancements = styled.ul`
+  margin-left: 10px;
+
+  > :not(:first-child) {
+    margin-top: 4px;
+  }
+`;
+
+export const FinalDesignColumn = styled(Column)`
+  margin: 36px 21px 40px 21px;
+  > :first-child {
+    margin-bottom: 8px;
+  }
+`;
+
+export const FinalScreen = styled.img`
+  width: 332px;
+`;
+
+export const ThankYou = styled.div`
+  > :first-child {
+    margin-bottom: 38px;
+  }
 `;

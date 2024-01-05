@@ -3,14 +3,25 @@ import React from 'react';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import { ScrollUp } from '../components/ScrollUp';
+import CircleLogo1 from '../images/clearify-case/circle_logo1.png';
+import CircleLogo2 from '../images/clearify-case/circle_logo2.png';
+import CircleLogo3 from '../images/clearify-case/circle_logo3.png';
 import CompetitorLogos from '../images/clearify-case/competitor_logos.png';
+import FinalInput from '../images/clearify-case/final_input.png';
+import FinalOutput from '../images/clearify-case/final_output.png';
+import Iconography from '../images/clearify-case/iconography.png';
+import InputScreens from '../images/clearify-case/input_screens.png';
 import Insight1a from '../images/clearify-case/insight1a.png';
 import Insight1b from '../images/clearify-case/insight1b.png';
 import Insight2 from '../images/clearify-case/insight2.png';
 import Insight3 from '../images/clearify-case/insight3.png';
+import LogoGreen from '../images/clearify-case/logo_green.png';
+import OutputScreens from '../images/clearify-case/output_screens.png';
+import SquareLogo1 from '../images/clearify-case/square_logo1.png';
+import SquareLogo2 from '../images/clearify-case/square_logo2.png';
 import Computer from '../images/clearify-preview/computer.png';
 import ClearifyLogo from '../images/clearify-preview/logo.png';
-import { Column, Row, Text } from '../ui';
+import { Column, Link, Row, Text } from '../ui';
 
 import * as Styled from './Clearify.styles';
 
@@ -206,15 +217,180 @@ export const Clearify = () => {
           shades of yellow to create an inviting look. The holistic minimalist
           aesthetic pushes forth the idea of simplifying skincare shopping.
         </Text>
+        <Styled.DesignSystem>
+          <Styled.DesignSystemCol>
+            <Styled.DesignSystemHeader type="montserrat">
+              TYPOGRAPHY
+            </Styled.DesignSystemHeader>
+            <Typography
+              title="Headline 1"
+              subtitle="Outfit SemiBold - H1 44px"
+              weight={600}
+              size={44}
+            />
+            <Typography
+              title="Headline 2"
+              subtitle="Outfit SemiBold - H2 36px"
+              weight={600}
+              size={36}
+            />
+            <Typography
+              title="Headline 3"
+              subtitle="Outfit SemiBold - H3 28px"
+              weight={600}
+              size={28}
+            />
+            <Typography
+              title="Paragraph"
+              subtitle="Outfit Regular - P 20px"
+              weight={400}
+              size={20}
+            />
+          </Styled.DesignSystemCol>
+          <Styled.DesignSystemCol>
+            <Styled.DesignSystemHeader type="montserrat">
+              COLOR
+            </Styled.DesignSystemHeader>
+            <Color label="Primary" hex="#40A582" />
+            <Color label="Accent 1" hex="#BFDED1" />
+            <Color label="Accent 2" hex="#338468" />
+            <Color label="Negative" hex="#F34E4E" />
+            <Color label="Grey" hex="#D0D0D0" />
+          </Styled.DesignSystemCol>
+          <Styled.DesignSystemCol>
+            <Styled.DesignSystemHeader type="montserrat">
+              SPACING
+            </Styled.DesignSystemHeader>
+            <Styled.SpacingGrid>
+              <Spacing size={5} label="XS" />
+              <Spacing size={10} label="S" />
+              <Spacing size={15} label="M" />
+              <Spacing size={25} label="L" />
+              <Spacing size={40} label="XL" />
+              <Spacing size={65} label="XXL" />
+            </Styled.SpacingGrid>
+          </Styled.DesignSystemCol>
+          <Styled.DesignSystemCol>
+            <Styled.DesignSystemHeader type="montserrat">
+              ICONOGRAPHY
+            </Styled.DesignSystemHeader>
+            <Styled.Iconography src={Iconography} alt="Iconography" />
+          </Styled.DesignSystemCol>
+        </Styled.DesignSystem>
+        <Styled.Logos justify="center">
+          <Column>
+            <Styled.WordLogo src={LogoGreen} alt="Clearify Logo" />
+            <Styled.CircleLogos>
+              <Styled.CircleLogo src={CircleLogo1} alt="Circle Logo 1" />
+              <Styled.CircleLogo src={CircleLogo2} alt="Circle Logo 2" />
+              <Styled.CircleLogo src={CircleLogo3} alt="Circle Logo 3" />
+            </Styled.CircleLogos>
+          </Column>
+          <Styled.SquareLogo src={SquareLogo1} alt="Square Logo 1" />
+          <Styled.SquareLogo src={SquareLogo2} alt="Square Logo 2" />
+        </Styled.Logos>
         <Styled.SectionDivider>TESTING + ITERATING</Styled.SectionDivider>
+
         <Text type="text-t5">
           The evolution of our design was based on user survey responses and
           usability testing within our team due to the short timespan. However,
           the quick turnaround of feedback allowed us to iterate continuously
           and thus craft a more intuitive and seamless user experience.
         </Text>
+        <br />
+        <Text type="text-t1" weight={700}>
+          Input screen: minimizing user effort.
+        </Text>
+        <br />
+        <Text type="text-t5">
+          A common theme across all wireframes for the input screen was
+          simplicity.{' '}
+          <b>
+            <i>
+              How can we streamline the input process so that users expend as
+              little effort as possible attaining product analyses?
+            </i>
+          </b>
+          Ultimately, we opted for a singular input field, clear
+          calls-to-action, and minimal branding to stay consistent with
+          Clearify&apos;s clean visual identity.
+        </Text>
+        <Styled.InputScreens src={InputScreens} alt="Input Screens" />
+        <Text type="text-t1" weight={700}>
+          Output screen: in-depth and personalized yet straightforward analysis.
+        </Text>
+        <br />
+        <Text type="text-t5">
+          Because skin type compatibility was a primary user concern as
+          indicated from our user survey, we placed a skin type suitability
+          graphic at the head of the analysis screen. Thus, users receive
+          personalized insight first thing.
+          <br />
+          <br />
+          Users pinpointed 2 additional concerns, which confirmed our initial
+          approach to the output screen: 1) potential harmful ingredients and 2)
+          the beneficial effects of a product.
+          <Styled.OutputConcerns>
+            <li>
+              Potential harmful ingredients -{' '}
+              <span>
+                feedback from initial iterations revealed confusion over the
+                combination of the red-green color coding and “ingredient-free”
+                wording. The need to clarify exactly which harmful ingredients
+                are present within a product led to simplifying the language and
+                section header.
+              </span>
+            </li>
+            <li>
+              Beneficial product effects -{' '}
+              <span>
+                added icons for ease of identification of the positive effects
+                of a skincare product, such as moisturizing, acne-fighting, and
+                brightening.
+              </span>
+            </li>
+          </Styled.OutputConcerns>
+        </Text>
+        <Styled.OutputScreens src={OutputScreens} alt="Output Screens" />
+        <Text type="text-t1" weight={700}>
+          Enhancing clarity
+        </Text>
+        <br />
+        <Text type="text-t5">
+          <Styled.Enhancements>
+            <li>
+              <b>Eliminated rating systems</b> to minimize confusion and the
+              friction of needing to learn how they are codified
+            </li>
+            <li>
+              <b>Reduced information overload</b> by removing the redundant
+              ingredients list within the output screen
+            </li>
+            <li>
+              <b>Maintained a consistent, left-aligned layout</b> with clearly
+              marked sections for ease of readability
+            </li>
+          </Styled.Enhancements>
+        </Text>
         <Styled.SectionDivider>FINAL PRODUCT</Styled.SectionDivider>
         <Styled.SectionTitle>The final design</Styled.SectionTitle>
+        <Row justify="center" align="flex-start">
+          <Styled.FinalDesignColumn>
+            <Text type="text-t3" weight={700}>
+              Input Screen
+            </Text>
+            <Styled.FinalScreen src={FinalInput} />
+          </Styled.FinalDesignColumn>
+          <Styled.FinalDesignColumn>
+            <Text type="text-t3" weight={700}>
+              Output Screen
+            </Text>
+            <Styled.FinalScreen src={FinalOutput} />
+          </Styled.FinalDesignColumn>
+        </Row>
+        <Text type="text-t3" weight={700}>
+          In Action
+        </Text>
         <Styled.SectionDivider>REFLECTIONS + NEXT STEPS</Styled.SectionDivider>
         <Styled.SectionTitle>
           Keeping an open mind and staying flexible.
@@ -236,9 +412,57 @@ export const Clearify = () => {
           research process even more by allowing users to contrast two skincare
           products at once.
         </Text>
+        <Styled.SectionDivider>&nbsp;</Styled.SectionDivider>
+        <Styled.ThankYou>
+          <Text size={32} weight={700}>
+            Thank you for reading!
+          </Text>
+          <Text type="text-t4">
+            Reach out to me at{' '}
+            <Link href="mailto: megyuan@ucla.edu">megyuan@ucla.edu</Link> to
+            learn more and connect.
+          </Text>
+        </Styled.ThankYou>
       </Styled.Content>
       <Footer />
       <ScrollUp />
+    </>
+  );
+};
+
+const Typography = ({ title, subtitle, weight, size }) => {
+  return (
+    <Styled.Typography>
+      <Text type="outfit" weight={weight} size={size}>
+        {title}
+      </Text>
+      <Text type="montserrat" size={10} weight={500}>
+        {subtitle}
+      </Text>
+    </Styled.Typography>
+  );
+};
+
+const Color = ({ label, hex }) => {
+  return (
+    <Styled.ColorRow>
+      <Styled.ColorSquare color={hex} />
+      <Text type="montserrat" size={10} weight={500}>
+        {label}
+        <br />
+        {hex}
+      </Text>
+    </Styled.ColorRow>
+  );
+};
+
+const Spacing = ({ size, label }) => {
+  return (
+    <>
+      <Styled.SpacingSquare size={size} />
+      <Text type="montserrat" size={10} weight={500}>
+        {`${size}px ${label}`}
+      </Text>
     </>
   );
 };

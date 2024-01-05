@@ -3,7 +3,8 @@ export const Font = {
   SansSerif: 'DM Sans, sans-serif',
   Cursive: 'Coiny, cursive',
   SansSerif2: 'Inter, sans-serif',
-  Outfit: 'Outfit, sans-serif'
+  Outfit: 'Outfit, sans-serif',
+  Montserrat: 'Montserrat, sans-serif'
 };
 
 export const textStyles = {
@@ -20,7 +21,8 @@ export const textStyles = {
     'text-t7': `400 17px ${Font.SansSerif2}`,
     'cursive-c1': `400 80px ${Font.Cursive}`,
     'cursive-c2': `400 72px ${Font.Cursive}`,
-    outfit: `400 40px ${Font.Outfit}`
+    outfit: `500 40px ${Font.Outfit}`,
+    montserrat: `700 12px ${Font.Montserrat}`
   },
   mobile: {
     'display-h1': `400 80px ${Font.Serif}`,
@@ -35,6 +37,7 @@ export const textStyles = {
     'text-t7': `400 17px ${Font.SansSerif2}`,
     'cursive-c1': `400 80px ${Font.Cursive}`,
     'cursive-c2': `400 72px ${Font.Cursive}`,
-    outfit: `400 40px ${Font.Outfit}`
+    outfit: `500 40px ${Font.Outfit}`,
+    montserrat: `700 12px ${Font.Montserrat}`
   }
 };
