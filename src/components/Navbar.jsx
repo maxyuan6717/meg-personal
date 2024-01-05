@@ -8,7 +8,7 @@ const Container = styled.div`
   padding: 64px 84px 40px 84px;
   background-color: transparent;
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto;
   column-gap: 54px;
   align-items: center;
   width: 100%;
@@ -64,6 +64,11 @@ export const Navbar = () => {
       <Link to="/">
         <NavLink type="text-t4" selected={pathname === '/'}>
           Works
+        </NavLink>
+      </Link>
+      <Link to="/sketchbook">
+        <NavLink type="text-t4" selected={pathname === '/sketchbook'}>
+          Sketchbook
         </NavLink>
       </Link>
       <Link to="/about">

@@ -8,7 +8,7 @@ import {
 import styled, { ThemeProvider } from 'styled-components';
 
 import { useDimensions } from './hooks/useDimensions';
-import { About, Dumpling, Home } from './pages';
+import { About, Clearify, Dumpling, Home, Sketchbook } from './pages';
 import { base, GlobalStyle } from './ui';
 
 const Container = styled.div`
@@ -39,7 +39,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/sketchbook" element={<Sketchbook />} />
             <Route path="/dumpling-delight" element={<Dumpling />} />
+            <Route path="/clearify" element={<Clearify />} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </Container>

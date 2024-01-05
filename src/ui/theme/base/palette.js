@@ -7,5 +7,6 @@ export const palette = {
   secondary: '#8F8D86',
   'secondary-light': '#B4B4B4',
   blue: '#749AB6',
-  red: '#E4250C'
+  red: '#E4250C',
+  green: '#40A582'
 };

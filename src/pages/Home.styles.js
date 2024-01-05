@@ -76,12 +76,16 @@ export const WorksContainer = styled(Column)`
   min-height: 100vh;
 
   padding-top: 144px;
+
+  > :not(:last-child) {
+    margin-bottom: 110px;
+  }
 `;
 
 export const Work = styled.div`
   filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.25));
-  background-color: ${({ theme }) =>
-    Color.makeHexTranslucent(theme.palette.red, 0.6)};
+  background-color: ${({ theme, color }) =>
+    Color.makeHexTranslucent(theme.palette[color], 0.6)};
   cursor: pointer;
   width: 1220px;
   height: 684px;
@@ -99,8 +103,8 @@ export const Work = styled.div`
   }
 
   &:hover {
-    background-color: ${({ theme }) =>
-      Color.makeHexTranslucent(theme.palette.red, 0.7)};
+    background-color: ${({ theme, color }) =>
+      Color.makeHexTranslucent(theme.palette[color], 0.7)};
 
     > ${Row} {
       transform: scale(1.05);
@@ -111,4 +115,17 @@ export const Work = styled.div`
 export const Phone = styled.img`
   width: 200px;
   height: auto;
+`;
+
+export const Computer = styled.img`
+  width: 640px;
+  height: auto;
+
+  margin-right: 0 !important;
+`;
+
+export const ClearifyLogo = styled.img`
+  height: 130px;
+  width: auto;
+  margin-bottom: 40px;
 `;

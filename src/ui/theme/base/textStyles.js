@@ -2,7 +2,8 @@ export const Font = {
   Serif: 'Lora, serif',
   SansSerif: 'DM Sans, sans-serif',
   Cursive: 'Coiny, cursive',
-  SansSerif2: 'Inter, sans-serif'
+  SansSerif2: 'Inter, sans-serif',
+  Outfit: 'Outfit, sans-serif'
 };
 
 export const textStyles = {
@@ -18,7 +19,8 @@ export const textStyles = {
     'text-t6': `700 21px ${Font.SansSerif2}`,
     'text-t7': `400 17px ${Font.SansSerif2}`,
     'cursive-c1': `400 80px ${Font.Cursive}`,
-    'cursive-c2': `400 72px ${Font.Cursive}`
+    'cursive-c2': `400 72px ${Font.Cursive}`,
+    outfit: `400 40px ${Font.Outfit}`
   },
   mobile: {
     'display-h1': `400 80px ${Font.Serif}`,
@@ -32,6 +34,7 @@ export const textStyles = {
     'text-t6': `700 21px ${Font.SansSerif2}`,
     'text-t7': `400 17px ${Font.SansSerif2}`,
     'cursive-c1': `400 80px ${Font.Cursive}`,
-    'cursive-c2': `400 72px ${Font.Cursive}`
+    'cursive-c2': `400 72px ${Font.Cursive}`,
+    outfit: `400 40px ${Font.Outfit}`
   }
 };

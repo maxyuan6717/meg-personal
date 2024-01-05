@@ -7,10 +7,12 @@ import { Navbar } from '../components/Navbar';
 import { ScrollUp } from '../components/ScrollUp';
 import resume from '../files/meg_yuan_resume.pdf';
 import { useDimensions } from '../hooks/useDimensions';
+import Computer from '../images/clearify-preview/computer.png';
+import ClearifyLogo from '../images/clearify-preview/logo.png';
 import Phone1 from '../images/dumpling-preview/phone1.png';
 import Phone2 from '../images/dumpling-preview/phone2.png';
 import Phone3 from '../images/dumpling-preview/phone3.png';
-import { Icons, Link, Row, Text } from '../ui';
+import { Column, Icons, Link, Row, Text } from '../ui';
 
 import * as Styled from './Home.styles';
 
@@ -81,7 +83,7 @@ export const Home = () => {
       <Styled.WorksContainer>
         <FadeInSection>
           <RouterLink to="dumpling-delight">
-            <Styled.Work>
+            <Styled.Work color="red">
               <Row>
                 <div>
                   <Text type="cursive-c2" color="white" lineHeight={80}>
@@ -98,6 +100,23 @@ export const Home = () => {
                 <Styled.Phone src={Phone1} />
                 <Styled.Phone src={Phone2} />
                 <Styled.Phone src={Phone3} />
+              </Row>
+            </Styled.Work>
+          </RouterLink>
+        </FadeInSection>
+        <FadeInSection>
+          <RouterLink to="clearify">
+            <Styled.Work color="green">
+              <Row>
+                <Styled.Computer src={Computer} />
+                <Column>
+                  <Styled.ClearifyLogo src={ClearifyLogo} alt="Clearify Logo" />
+                  <Text type="outfit" color="white">
+                    No extra tabs.
+                    <br />
+                    No extra stress.
+                  </Text>
+                </Column>
               </Row>
             </Styled.Work>
           </RouterLink>
