@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
@@ -27,9 +27,9 @@ import { Column, Link, Row, Text } from '../ui';
 import * as Styled from './Clearify.styles';
 
 export const Clearify = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />
