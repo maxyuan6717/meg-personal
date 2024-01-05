@@ -255,6 +255,10 @@ export const FinalScreen = styled.img`
   width: 332px;
 `;
 
+export const DemoVideo = styled(Row)`
+  margin-top: 36px;
+`;
+
 export const ThankYou = styled.div`
   > :first-child {
     margin-bottom: 38px;

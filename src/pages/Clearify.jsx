@@ -14,6 +14,7 @@ import InputScreens from '../images/clearify-case/input_screens.png';
 import Insight1a from '../images/clearify-case/insight1a.png';
 import Insight1b from '../images/clearify-case/insight1b.png';
 import Insight2 from '../images/clearify-case/insight2.png';
+import { PlayWhenVisibleVideo } from '../components/PlayWhenVisibleVideo';
 import Insight3 from '../images/clearify-case/insight3.png';
 import LogoGreen from '../images/clearify-case/logo_green.png';
 import OutputScreens from '../images/clearify-case/output_screens.png';
@@ -391,6 +392,12 @@ export const Clearify = () => {
         <Text type="text-t3" weight={700}>
           In Action
         </Text>
+        <Styled.DemoVideo justify="center">
+          <PlayWhenVisibleVideo
+            width="945"
+            src="videos/clearify-case/demo.mov"
+          />
+        </Styled.DemoVideo>
         <Styled.SectionDivider>REFLECTIONS + NEXT STEPS</Styled.SectionDivider>
         <Styled.SectionTitle>
           Keeping an open mind and staying flexible.
