@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { ReactComponent as _Blob } from '../images/clearify-case/blob.svg';
 import { Column, Row } from '../ui';
 import { Color } from '../util';
