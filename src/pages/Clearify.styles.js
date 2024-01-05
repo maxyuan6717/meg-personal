@@ -144,11 +144,7 @@ export const DesignSystemHeader = styled(Text)`
   margin-bottom: 24px;
 `;
 
-export const Typography = styled.div`
-  > :first-child {
-    margin-bottom: 4px;
-  }
-`;
+export const Typography = styled.div``;
 
 export const ColorRow = styled.div`
   display: grid;
@@ -223,7 +219,7 @@ export const InputScreens = styled.img`
 
 export const OutputScreens = styled.img`
   width: 1027px;
-  margin-top: 32px 0 54px 0;
+  margin: 32px 0 54px 0;
 `;
 
 export const OutputConcerns = styled.ol`
