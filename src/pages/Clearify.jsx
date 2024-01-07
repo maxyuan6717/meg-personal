@@ -311,7 +311,7 @@ export const Clearify = () => {
               How can we streamline the input process so that users expend as
               little effort as possible attaining product analyses?
             </i>
-          </b>
+          </b>{' '}
           Ultimately, we opted for a singular input field, clear
           calls-to-action, and minimal branding to stay consistent with
           Clearify&apos;s clean visual identity.
