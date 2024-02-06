@@ -41,9 +41,10 @@ const Container = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: ${({ maxWidth }) => maxWidth}px;
+  /* max-width: ${({ maxWidth }) => maxWidth}px;
+  max-height: ${({ maxHeight }) => maxHeight}px; */
   width: auto;
-  height: auto;
+  height: 400px;
 `;
 
 const ArrowContainer = css`
@@ -75,7 +76,12 @@ export const ArtCarousel = () => {
   const [index, setIndex] = useState(0);
   return (
     <Container>
-      <Image src={images[index]} alt="art" maxWidth={width - 80} />
+      <Image
+        src={images[index]}
+        alt="art"
+        maxWidth={width - 80}
+        maxHeight={400}
+      />
       {index > 0 && (
         <LeftArrow onClick={() => setIndex((prev) => prev - 1)}>
           <Icons.leftCaret />
