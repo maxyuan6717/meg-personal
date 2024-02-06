@@ -4,33 +4,50 @@ import { Column, Row, Text } from '../ui';
 import { Color } from '../util';
 
 export const Splash = styled.div`
-  background-color: ${({ theme }) => theme.palette['off-white']};
+  background-color: ${({ theme }) => theme.palette.white};
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: relative;
-
-  svg {
-    fill: ${({ theme }) => theme.palette['off-black']};
-  }
 `;
 
 export const SplashContent = styled.div`
-  width: 800px;
-  margin: 8vh 0 0 18vw;
+  display: grid;
+  grid-template-columns: 144px 420px;
+  column-gap: 25px;
+  align-items: center;
 
-  > :nth-child(2) {
-    margin: 10px 0 25px 0;
+  img {
+    width: 144px;
+    height: auto;
   }
+`;
 
-  ${Text} {
-    color: ${({ theme }) => theme.palette['off-black']};
-  }
+export const Other = styled.div`
+  padding: 40px;
 
-  .blue {
-    color: ${({ theme }) => theme.palette['blue']};
+  > :not(:last-child) {
+    margin-bottom: 300px;
   }
+`;
+
+export const Section = styled.div``;
+
+export const SectionHeader = styled(Text)`
+  margin-bottom: 20px;
+`;
+
+export const WorksGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 20px;
+`;
+
+export const AboutMe = styled(Text)`
+  max-width: 608px;
 `;
 
 export const ButtonRow = styled(Row)`
@@ -112,20 +129,7 @@ export const Work = styled.div`
   }
 `;
 
-export const Phone = styled.img`
-  width: 200px;
-  height: auto;
-`;
-
-export const Computer = styled.img`
-  width: 640px;
-  height: auto;
-
-  margin-right: 0 !important;
-`;
-
-export const ClearifyLogo = styled.img`
-  height: 130px;
+export const WorkImage = styled.img`
   width: auto;
-  margin-bottom: 40px;
+  height: 208px;
 `;

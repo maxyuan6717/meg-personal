@@ -4,7 +4,8 @@ export const Font = {
   Cursive: 'Coiny, cursive',
   SansSerif2: 'Inter, sans-serif',
   Outfit: 'Outfit, sans-serif',
-  Montserrat: 'Montserrat, sans-serif'
+  Montserrat: 'Montserrat, sans-serif',
+  Karla: 'Karla, sans-serif'
 };
 
 export const textStyles = {
@@ -22,7 +23,10 @@ export const textStyles = {
     'cursive-c1': `400 80px ${Font.Cursive}`,
     'cursive-c2': `400 72px ${Font.Cursive}`,
     outfit: `500 40px ${Font.Outfit}`,
-    montserrat: `700 12px ${Font.Montserrat}`
+    montserrat: `700 12px ${Font.Montserrat}`,
+    'karla-t1': `500 18px ${Font.Karla}`,
+    'karla-t2': `500 16px ${Font.Karla}`,
+    'karla-h1': `700 18px ${Font.Karla}`
   },
   mobile: {
     'display-h1': `400 80px ${Font.Serif}`,
