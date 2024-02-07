@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { ArtCarousel } from '../components/ArtCarousel';
 import { Footer } from '../components/NewFooter';
@@ -17,13 +18,23 @@ export const Home = () => {
   const worksRef = useRef(null);
   const aboutRef = useRef(null);
   const artRef = useRef(null);
+  const { state } = useLocation();
+  const { section } = state || {};
 
-  const scrollTo = (section) => {
+  const scrollTo = (section, smooth = true) => {
     const y = (
       section === 'works' ? worksRef : section === 'about' ? aboutRef : artRef
     ).current.offsetTop;
-    window.scrollTo({ top: y - 100, behavior: 'smooth' });
+    window.scrollTo({ top: y - 100, behavior: smooth ? 'smooth' : 'auto' });
   };
+
+  useEffect(() => {
+    if (section) {
+      scrollTo(section, false);
+      // clear state
+      window.history.replaceState({}, '');
+    }
+  }, [section]);
 
   return (
     <>
@@ -43,14 +54,14 @@ export const Home = () => {
       </Styled.Splash>
       <Styled.Other>
         <Styled.Section ref={worksRef}>
-          <Styled.SectionHeader type="karla-h1">My work</Styled.SectionHeader>
+          <Styled.SectionHeader type="karla-h3">My work</Styled.SectionHeader>
           <Styled.WorksGrid>
-            <Work
+            {/* <Work
               name="Tabi"
               tags={['UX Design']}
               color="blue"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
-            ></Work>
+            ></Work> */}
             <Work
               name="Dumpling Delight"
               tags={['UX Design', 'UX Research']}
@@ -76,7 +87,7 @@ export const Home = () => {
           </Styled.WorksGrid>
         </Styled.Section>
         <Styled.Section ref={aboutRef}>
-          <Styled.SectionHeader type="karla-h1">About me</Styled.SectionHeader>
+          <Styled.SectionHeader type="karla-h3">About me</Styled.SectionHeader>
           <Styled.AboutMe type="karla-t1">
             I&apos;m a current junior studying Cognitive Science at UCLA.
             <br />
@@ -99,13 +110,13 @@ export const Home = () => {
           </Styled.AboutMe>
         </Styled.Section>
         <Styled.Section ref={artRef}>
-          <Styled.SectionHeader type="karla-h1">
+          <Styled.SectionHeader type="karla-h3">
             Some artwork
           </Styled.SectionHeader>
           <ArtCarousel />
         </Styled.Section>
         <Styled.Section>
-          <Text type="karla-h1">{'Thanks for visiting :)'}</Text>
+          <Text type="karla-h3">{'Thanks for visiting :)'}</Text>
         </Styled.Section>
       </Styled.Other>
     </>

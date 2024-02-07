@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Icons, Text } from '../ui';
@@ -9,12 +10,20 @@ const Container = styled.div`
   background-color: ${({ theme }) =>
     Color.makeHexTranslucent(theme.palette.white, 0.9)};
   display: grid;
-  grid-template-columns: 1fr auto auto auto;
+  grid-template-columns: 1fr auto auto;
   column-gap: 35px;
   align-items: center;
   width: 100%;
 
   ${({ fixed }) => fixed && 'position: fixed; top: 0; left:0; z-index: 1000;'}
+`;
+
+export const Logo = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
 `;
 
 export const NavLink = styled(Text)`
@@ -53,19 +62,32 @@ export const NavLink = styled(Text)`
   }
 `;
 
-export const Navbar = ({ fixed = false, scrollTo }) => {
+export const Navbar = ({ fixed = false, scrollTo: _scrollTo }) => {
+  const navigate = useNavigate();
+  const defaultScrollTo = (section) => {
+    navigate('/', {
+      state: {
+        section
+      }
+    });
+  };
+
+  const scrollTo = _scrollTo || defaultScrollTo;
+
   return (
     <Container fixed={fixed}>
-      <Icons.logo width={36} height={36} />
-      <NavLink onClick={() => scrollTo('works')} type="karla-h1">
+      <Logo onClick={() => navigate('/')}>
+        <Icons.logo width={36} height={36} />
+      </Logo>
+      <NavLink onClick={() => scrollTo('works')} type="karla-h3">
         Work
       </NavLink>
-      <NavLink onClick={() => scrollTo('about')} type="karla-h1">
+      <NavLink onClick={() => scrollTo('about')} type="karla-h3">
         About
       </NavLink>
-      <NavLink onClick={() => scrollTo('art')} type="karla-h1">
+      {/* <NavLink onClick={() => scrollTo('art')} type="karla-h3">
         Artwork
-      </NavLink>
+      </NavLink> */}
     </Container>
   );
 };

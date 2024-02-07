@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { Footer } from '../components/Footer';
-import { Navbar } from '../components/Navbar';
+import { Navbar } from '../components/NewNavbar';
 import { PlayWhenVisibleVideo } from '../components/PlayWhenVisibleVideo';
 import { ScrollUp } from '../components/ScrollUp';
 import CircleLogo1 from '../images/clearify-case/circle_logo1.png';

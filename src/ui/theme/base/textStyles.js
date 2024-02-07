@@ -20,13 +20,17 @@ export const textStyles = {
     'text-t5': `400 22px ${Font.SansSerif}`,
     'text-t6': `700 21px ${Font.SansSerif2}`,
     'text-t7': `400 17px ${Font.SansSerif2}`,
-    'cursive-c1': `400 80px ${Font.Cursive}`,
+    'cursive-c1': `400 55px ${Font.Cursive}`,
     'cursive-c2': `400 72px ${Font.Cursive}`,
     outfit: `500 40px ${Font.Outfit}`,
     montserrat: `700 12px ${Font.Montserrat}`,
     'karla-t1': `500 18px ${Font.Karla}`,
     'karla-t2': `500 16px ${Font.Karla}`,
-    'karla-h1': `700 18px ${Font.Karla}`
+    'karla-t3': `500 14px ${Font.Karla}`,
+    'karla-h1': `700 28px ${Font.Karla}`,
+    'karla-h2': `700 20px ${Font.Karla}`,
+    'karla-h3': `700 18px ${Font.Karla}`,
+    'karla-h4': `700 16px ${Font.Karla}`
   },
   mobile: {
     'display-h1': `400 80px ${Font.Serif}`,
@@ -42,6 +46,13 @@ export const textStyles = {
     'cursive-c1': `400 80px ${Font.Cursive}`,
     'cursive-c2': `400 72px ${Font.Cursive}`,
     outfit: `500 40px ${Font.Outfit}`,
-    montserrat: `700 12px ${Font.Montserrat}`
+    montserrat: `700 12px ${Font.Montserrat}`,
+    'karla-t1': `500 18px ${Font.Karla}`,
+    'karla-t2': `500 16px ${Font.Karla}`,
+    'karla-t3': `500 14px ${Font.Karla}`,
+    'karla-h1': `700 28px ${Font.Karla}`,
+    'karla-h2': `700 20px ${Font.Karla}`,
+    'karla-h3': `700 18px ${Font.Karla}`,
+    'karla-h4': `700 16px ${Font.Karla}`
   }
 };

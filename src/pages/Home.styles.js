@@ -52,7 +52,7 @@ export const SectionHeader = styled(Text)`
 
 export const WorksGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
   gap: 20px;
 `;
 
