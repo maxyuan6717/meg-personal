@@ -7,16 +7,16 @@ import { Icons } from '../ui';
 const Container = styled.div`
   cursor: pointer;
   position: fixed;
-  bottom: 32px;
-  right: 20px;
+  bottom: 80px;
+  right: 28px;
 
   transition: all 0.2s ease-in-out;
   opacity: ${({ show }) => (show ? 1 : 0)};
   pointer-events: ${({ show }) => (show ? 'all' : 'none')};
 
   svg {
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
     fill: ${({ theme }) => theme.palette.secondary};
     transition: fill 0.2s;
   }

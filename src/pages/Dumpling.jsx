@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { Footer } from '../components/Footer';
-import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/NewFooter';
+import { Navbar } from '../components/NewNavbar';
 import { PlayWhenVisibleVideo } from '../components/PlayWhenVisibleVideo';
 import { ScrollUp } from '../components/ScrollUp';
 import Chipotle from '../images/dumpling-case/chipotle.png';
@@ -18,7 +18,7 @@ import Sunright from '../images/dumpling-case/sunright.png';
 import Phone1 from '../images/dumpling-preview/phone1.png';
 import Phone2 from '../images/dumpling-preview/phone2.png';
 import Phone3 from '../images/dumpling-preview/phone3.png';
-import { Column, Icons, Link, Row, Text } from '../ui';
+import { Column, Icons, Row, Text } from '../ui';
 
 import * as Styled from './Dumpling.styles';
 
@@ -26,17 +26,18 @@ export const Dumpling = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
-      <Navbar />
+      <Navbar fixed />
       <Styled.Header>
         <div>
-          <Text type="cursive-c1" color="white" lineHeight={80}>
+          <Text type="cursive-c1" color="red" lineHeight={55}>
             DUMPLING
             <br />
             DELIGHT
           </Text>
-          <Text type="text-t2" color="white">
+          <Text type="text-t4" color="red">
             Enhancing the dine-in
             <br />
             ordering experience.
@@ -49,14 +50,14 @@ export const Dumpling = () => {
       <Styled.Content>
         <Styled.IntroSection>
           <div>
-            <Text type="text-t3">My Role</Text>
-            <Text type="text-t5">
+            <Text type="karla-h2">My Role</Text>
+            <Text type="karla-t2">
               Solo student project for Google UX Design Professional Certificate
             </Text>
           </div>
           <div>
-            <Text type="text-t3">Timeline</Text>
-            <Text type="text-t5">July 2023 - September 2023</Text>
+            <Text type="karla-h2">Timeline</Text>
+            <Text type="karla-t2">July 2023 - September 2023</Text>
           </div>
         </Styled.IntroSection>
         <Styled.SectionDivider>PROBLEM</Styled.SectionDivider>
@@ -64,14 +65,14 @@ export const Dumpling = () => {
           Customers waste time dining in, thus opting for the convenience but
           compromised food quality of takeout.
         </Styled.SectionTitle>
-        <Text type="text-t5">
+        <Text type="karla-t2">
           Almost all of us have experienced the agonizing wait for food to
           arrive at the table or for the waiter to finally come around. The
           convenience factor of delivery apps and takeout options have
           popularized online ordering—but at the expense of potential lower food
           quality.
         </Text>
-        <Styled.ProblemQuestion type="text-t3" color="red">
+        <Styled.ProblemQuestion type="karla-h3" color="red">
           How might we expedite the dine-in ordering process while maintaining
           the quality and freshness of food?
           <div>?</div>
@@ -80,7 +81,7 @@ export const Dumpling = () => {
         <Styled.SectionTitle>
           All-in-one mobile restaurant app for ordering, tracking, and paying.
         </Styled.SectionTitle>
-        <Text type="text-t5">
+        <Text type="karla-t2">
           Combining the <b>convenience and accessibility</b> of takeout with the{' '}
           <b>quality and freshness</b> of eating in to create an{' '}
           <b>elevated dine-in experience</b> for a fictional casual authentic
@@ -89,10 +90,8 @@ export const Dumpling = () => {
         <Styled.Steps>
           <Styled.Step>
             <Styled.StepText>
-              <Text type="text-t2" weight={700}>
-                Ordering
-              </Text>
-              <Text type="text-t5">
+              <Text type="karla-h1">Ordering</Text>
+              <Text type="karla-t2">
                 <ul>
                   <li>Start ordering whenever you are ready</li>
                   <li>
@@ -105,20 +104,18 @@ export const Dumpling = () => {
               <div className="bg-number">1</div>
             </Styled.StepText>
             <PlayWhenVisibleVideo
-              width="360"
+              width="285"
               src="videos/dumpling-case/solution1.mov"
             />
           </Styled.Step>
           <Styled.Step>
             <PlayWhenVisibleVideo
-              width="360"
+              width="285"
               src="videos/dumpling-case/solution2.mov"
             />
             <Styled.StepText>
-              <Text type="text-t2" weight={700}>
-                Tracking
-              </Text>
-              <Text type="text-t5">
+              <Text type="karla-h1">Tracking</Text>
+              <Text type="karla-t2">
                 <ul>
                   <li>
                     Scan your table barcode at the start to link your orders to
@@ -136,10 +133,8 @@ export const Dumpling = () => {
           </Styled.Step>
           <Styled.Step>
             <Styled.StepText>
-              <Text type="text-t2" weight={700}>
-                Paying
-              </Text>
-              <Text type="text-t5">
+              <Text type="karla-h1">Paying</Text>
+              <Text type="karla-t2">
                 <ul>
                   <li>Pay whenever you are ready</li>
                   <li>
@@ -155,7 +150,7 @@ export const Dumpling = () => {
               <div className="bg-number">3</div>
             </Styled.StepText>
             <PlayWhenVisibleVideo
-              width="360"
+              width="285"
               src="videos/dumpling-case/solution3.mov"
             />
           </Styled.Step>
@@ -165,7 +160,7 @@ export const Dumpling = () => {
           No restaurant offers online ordering and real-time tracking for
           in-person dining.
         </Styled.SectionTitle>
-        <Text type="text-t5">
+        <Text type="karla-t2">
           After analyzing two establishments with in-store ordering and multiple
           fast food chains with takeout/delivery/pickup options, I found that
           almost no restaurant provides customers with both a mobile ordering
@@ -175,27 +170,19 @@ export const Dumpling = () => {
         <Styled.Restaurants>
           <Column>
             <img src={Haidilao} />
-            <Text typ="text-t5" weight={700}>
-              Haidilao
-            </Text>
+            <Text type="karla-h4">Haidilao</Text>
           </Column>
           <Column>
             <img src={Sunright} />
-            <Text typ="text-t5" weight={700}>
-              Sunright Tea Studio
-            </Text>
+            <Text type="karla-h4">Sunright Tea Studio</Text>
           </Column>
           <Column>
             <img src={Dominos} />
-            <Text typ="text-t5" weight={700}>
-              Domino&apos;s
-            </Text>
+            <Text type="karla-h4">Domino&apos;s</Text>
           </Column>
           <Column>
             <img src={Chipotle} />
-            <Text typ="text-t5" weight={700}>
-              Chiptole
-            </Text>
+            <Text type="karla-h4">Chiptole</Text>
           </Column>
         </Styled.Restaurants>
         <Styled.SectionDivider>USER INTERVIEWS</Styled.SectionDivider>
@@ -203,7 +190,7 @@ export const Dumpling = () => {
           Interviewees favored both dining in and taking out—but for separate
           reasons.
         </Styled.SectionTitle>
-        <Text type="text-t5">
+        <Text type="karla-t2">
           In addition to conducting competitive research, I interviewed 5
           individuals to learn about their typical eating out habits and their
           pain points when dining in and taking out.
@@ -234,49 +221,48 @@ export const Dumpling = () => {
           Busy individuals prioritize convenience but still value the social
           aspect and better food quality of dining in.
         </Styled.SectionTitle>
-        <Text type="text-t5">
+        <Text type="karla-t2">
           Through affinity mapping, I boiled down my research into a few key
           themes that defined the dine-in and takeout experiences. It then
           became my goal to marry the benefits of the two.
         </Text>
         <Styled.Insights>
           <Styled.InsightColumn>
-            <Text type="text-t2" weight={500}>
-              Dine-In
-            </Text>
-            <Text type="text-t4">
+            <Text type="karla-h2">Dine-In</Text>
+            <Text type="karla-t2">
               &ldquo;The experience makes the meal&rdquo;
             </Text>
             <Row>
-              <Styled.InsightExampleColumn maxWidth={168}>
-                <Icons.insight1 width={90} />
-                <Text type="text-t5" weight={500}>
-                  Better food quality & presentation
-                </Text>
+              <Styled.InsightExampleColumn maxWidth={115}>
+                <Icons.insight1 width={76} />
+                <Text type="karla-t2">Better food quality & presentation</Text>
               </Styled.InsightExampleColumn>
-              <Styled.InsightExampleColumn maxWidth={244}>
-                <Icons.insight2 width={67} />
-                <Text type="text-t5" weight={500}>
+              <Styled.InsightExampleColumn maxWidth={181}>
+                <Icons.insight2
+                  width={57}
+                  style={{
+                    marginTop: 12
+                  }}
+                />
+                <Text type="karla-t2">
                   Socialization & celebration of special occasions
                 </Text>
               </Styled.InsightExampleColumn>
             </Row>
           </Styled.InsightColumn>
           <Styled.InsightColumn>
-            <Text type="text-t2" weight={500}>
-              Takeout
-            </Text>
-            <Text type="text-t4">&ldquo;Convenience above all&rdquo;</Text>
+            <Text type="karla-h2">Takeout</Text>
+            <Text type="karla-t2">&ldquo;Convenience above all&rdquo;</Text>
             <Row>
-              <Styled.InsightExampleColumn maxWidth={222}>
-                <Icons.insight3 width={85} />
-                <Text type="text-t5" weight={500}>
+              <Styled.InsightExampleColumn maxWidth={156}>
+                <Icons.insight3 width={72} />
+                <Text type="karla-t2">
                   More expansive online menus with useful features
                 </Text>
               </Styled.InsightExampleColumn>
-              <Styled.InsightExampleColumn maxWidth={182}>
-                <Icons.insight4 width={85} />
-                <Text type="text-t5" weight={500}>
+              <Styled.InsightExampleColumn maxWidth={135}>
+                <Icons.insight4 width={72} />
+                <Text type="karla-t2">
                   Expedited ordering process saves time
                 </Text>
               </Styled.InsightExampleColumn>
@@ -288,21 +274,19 @@ export const Dumpling = () => {
           <Styled.PersonaImage>
             <img src={Persona} width="100%" height="auto" />
             <div>
-              <Text type="text-t6" size={50} weight={700}>
+              <Text type="karla-h1" size={40}>
                 Louise
               </Text>
-              <Text type="text-t6" size={20} weight={700}>
-                24 | Grad Student
-              </Text>
+              <Text type="karla-t2">24 | Grad Student</Text>
             </div>
           </Styled.PersonaImage>
           <Styled.PersonaText>
-            <Text type="text-t7" color="red" weight={600} italic>
+            <Text type="karla-h4" color="red" italic>
               “I&apos;m always looking for ways to maximize the use of my time.”
             </Text>
             <div>
-              <Text type="text-t6">About</Text>
-              <Text type="text-t7">
+              <Text type="karla-h2">About</Text>
+              <Text type="karla-t3">
                 Hi! I&apos;m Louise, a graduate student studying Law at the
                 University of Pennsylvania. With my busy course schedule and
                 part-time barista job, I rarely have the time to cook for
@@ -315,8 +299,8 @@ export const Dumpling = () => {
               </Text>
             </div>
             <div>
-              <Text type="text-t6">Goals</Text>
-              <Text type="text-t7">
+              <Text type="karla-h2">Goals</Text>
+              <Text type="karla-t3">
                 <ul>
                   <li>Achieve a good work-life balance</li>
                   <li>
@@ -328,8 +312,8 @@ export const Dumpling = () => {
               </Text>
             </div>
             <div>
-              <Text type="text-t6">Motivations</Text>
-              <Text type="text-t7">
+              <Text type="karla-h2">Motivations</Text>
+              <Text type="karla-t3">
                 <ul>
                   <li>Excel at school and maintain social life</li>
                   <li>Reduce daily stress around food</li>
@@ -338,8 +322,8 @@ export const Dumpling = () => {
               </Text>
             </div>
             <div>
-              <Text type="text-t6">Frustrations</Text>
-              <Text type="text-t7">
+              <Text type="karla-h2">Frustrations</Text>
+              <Text type="karla-t3">
                 <ul>
                   <li>Cooking for one is inefficient </li>
                   <li>
@@ -357,23 +341,23 @@ export const Dumpling = () => {
         </Styled.PersonaSection>
         <Styled.SectionDivider>TESTING + ITERATING</Styled.SectionDivider>
         <Styled.SectionTitle>3 major areas of improvement</Styled.SectionTitle>
-        <Text type="text-t5">
+        <Text type="karla-t2">
           Based on multiple rounds of feedback from 5 individuals, I made
           several iterations to my design with a focus on 3 key aspects of the
           ordering flow:
         </Text>
         <Styled.Steps marginTop={100}>
-          <Styled.Step gap={100}>
+          <Styled.Step>
             <Styled.ImprovementVideos>
               <PlayPauseVideo src="videos/dumpling-case/improve1-1.mov" />
               <Icons.rightArrow />
               <PlayPauseVideo src="videos/dumpling-case/improve1-2.mov" />
             </Styled.ImprovementVideos>
-            <Styled.StepText maxWidth={465}>
-              <Text type="text-t2" weight={700}>
+            <Styled.StepText maxWidth={400}>
+              <Text type="karla-h1" size={25}>
                 Simplify the send-to-kitchen process
               </Text>
-              <Text type="text-t5">
+              <Text type="karla-t3">
                 <ul>
                   <li>
                     Earliest iterations contained multiple confirmation screens
@@ -390,12 +374,12 @@ export const Dumpling = () => {
               <div className="bg-number">1</div>
             </Styled.StepText>
           </Styled.Step>
-          <Styled.Step gap={100}>
-            <Styled.StepText maxWidth={465}>
-              <Text type="text-t2" weight={700}>
+          <Styled.Step>
+            <Styled.StepText maxWidth={400}>
+              <Text type="karla-h1" size={25}>
                 Expand the cart preview functionality
               </Text>
-              <Text type="text-t5">
+              <Text type="karla-t3">
                 <ul>
                   <li>
                     Replaced the previous system of multiple rounds of orders
@@ -420,17 +404,17 @@ export const Dumpling = () => {
               <PlayPauseVideo src="videos/dumpling-case/improve2-2.mov" />
             </Styled.ImprovementVideos>
           </Styled.Step>
-          <Styled.Step gap={100}>
+          <Styled.Step>
             <Styled.ImprovementVideos>
               <PlayPauseVideo src="videos/dumpling-case/improve3-1.mov" />
               <Icons.rightArrow />
               <PlayPauseVideo src="videos/dumpling-case/improve3-2.mov" />
             </Styled.ImprovementVideos>
-            <Styled.StepText maxWidth={465}>
-              <Text type="text-t2" weight={700}>
+            <Styled.StepText maxWidth={400}>
+              <Text type="karla-h1" size={25}>
                 Add consistent reminders to guide action
               </Text>
-              <Text type="text-t5">
+              <Text type="karla-t3">
                 <ul>
                   <li>
                     Testing revealed hesitations over how to proceed after
@@ -472,11 +456,11 @@ export const Dumpling = () => {
           <Styled.SectionTitle>
             My first experience undergoing the design process.
           </Styled.SectionTitle>
-          <Text type="text-t5">
+          <Text type="karla-t2">
             Being my first UX project, I got to experience the complete design
             process for the first time. My biggest takeaways were:
           </Text>
-          <Text type="text-t5">
+          <Text type="karla-t2">
             <ol>
               <li>
                 <b>
@@ -506,10 +490,8 @@ export const Dumpling = () => {
               </li>
             </ol>
           </Text>
-          <Styled.SectionTitle>
-            If I had more time, I would...
-          </Styled.SectionTitle>
-          <Text type="text-t5">
+          <Styled.SectionTitle>Next steps...</Styled.SectionTitle>
+          <Text type="karla-t2">
             <ul>
               <li>
                 <b>Conduct more usability tests.</b> Based on my #1 takeaway
@@ -534,13 +516,11 @@ export const Dumpling = () => {
         </Styled.Reflections>
         <Styled.SectionDivider>&nbsp;</Styled.SectionDivider>
         <Styled.ThankYou>
-          <Text size={32} weight={700}>
-            Thank you for reading!
-          </Text>
-          <Text type="text-t4">
+          <Text type="kayla-h2">Thank you for reading!</Text>
+          <Text type="karla-t2">
             Reach out to me at{' '}
-            <Link href="mailto: megyuan@ucla.edu">megyuan@ucla.edu</Link> to
-            learn more and connect.
+            <a href="mailto: megyuan@ucla.edu">megyuan@ucla.edu</a> to learn
+            more and connect.
           </Text>
         </Styled.ThankYou>
       </Styled.Content>
@@ -556,7 +536,7 @@ const PlayPauseVideo = ({ src }) => {
 
   return (
     <Styled.PlayPauseVideo
-      width="243"
+      width="213"
       height="auto"
       loop
       muted

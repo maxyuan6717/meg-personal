@@ -5,9 +5,12 @@ import { Color } from '../util';
 
 export const Header = styled(Row)`
   width: 100%;
-  padding: 150px 0;
-  background-color: ${({ theme }) =>
-    Color.makeHexTranslucent(theme.palette.red, 0.7)};
+  padding: 190px 0 115px 0;
+  background: linear-gradient(
+    246deg,
+    #e5e5e5 15.53%,
+    rgba(229, 229, 229, 0.25) 89.74%
+  );
   justify-content: center;
 
   > :first-child {
@@ -23,26 +26,30 @@ export const Phone = styled.img`
 export const Content = styled(Column)`
   margin: 0 auto;
   width: 100%;
-  max-width: 1074px;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
 
   > * {
     width: 100%;
   }
+
+  b {
+    font-weight: 800;
+  }
 `;
 
 export const IntroSection = styled(Row)`
-  padding: 60px 80px 0 80px;
+  padding: 50px 95px 0 95px;
   margin-bottom: -20px;
   justify-content: space-between;
   align-items: flex-start;
 
   > * {
-    max-width: 500px;
+    max-width: 311px;
     > :first-child {
-      font-weight: 500;
-      margin-bottom: 20px;
+      font-weight: 800;
+      margin-bottom: 10px;
     }
   }
 `;
@@ -51,20 +58,17 @@ export const SectionDivider = styled.div`
   border-top: 1px solid ${({ theme }) => theme.palette.border};
   padding: 30px 0;
   margin-top: 80px;
-  font: ${({ theme }) => theme.textStyles.desktop['text-t5']};
-  font-weight: 500;
+  font: ${({ theme }) => theme.textStyles.desktop['karla-h3']};
 `;
 
 export const SectionTitle = styled.div`
   margin-bottom: 30px;
-  font: ${({ theme }) => theme.textStyles.desktop['text-t1']};
-  font-weight: 700;
+  font: ${({ theme }) => theme.textStyles.desktop['karla-h1']};
 `;
 
 export const ProblemQuestion = styled(Text)`
-  margin-top: 80px;
-  padding: 0 145px;
-  font-weight: 700;
+  margin-top: 50px;
+  padding: 0 200px;
   text-align: center;
   position: relative;
 
@@ -73,32 +77,32 @@ export const ProblemQuestion = styled(Text)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 250px;
+    font-size: 160px;
     font-weight: 700;
     color: ${({ theme }) => theme.palette.red};
     opacity: 0.07;
     z-index: -1;
-    line-height: 250px;
+    line-height: 160px;
   }
 `;
 
 export const Steps = styled.div`
-  margin-top: ${({ marginTop = 65 }) => marginTop}px;
+  margin-top: ${({ marginTop = 110 }) => marginTop}px;
   > :not(:first-child) {
-    margin-top: 150px;
+    margin-top: 135px;
   }
 `;
 
 export const Step = styled(Row)`
   justify-content: center;
   > :first-child {
-    margin-right: ${({ gap = 120 }) => gap}px;
+    margin-right: ${({ gap = 55 }) => gap}px;
   }
 `;
 
 export const StepText = styled.div`
   position: relative;
-  max-width: ${({ maxWidth = 443 }) => maxWidth}px;
+  max-width: ${({ maxWidth = 365 }) => maxWidth}px;
 
   ul {
     margin-top: 15px;
@@ -114,8 +118,8 @@ export const StepText = styled.div`
     top: 50%;
     left: 0;
     transform: translate(-20%, -50%);
-    font-size: 500px;
-    line-height: 500px;
+    font-size: 350px;
+    line-height: 350px;
     font-weight: 700;
     color: ${({ theme }) => theme.palette.red};
     opacity: 0.07;
@@ -130,12 +134,12 @@ export const Restaurants = styled(Row)`
   }
 
   > ${Column} {
-    max-width: 140px;
+    max-width: 95px;
 
     > img {
-      width: 140px;
-      height: 140px;
-      border-radius: 25px;
+      width: 95px;
+      height: 95px;
+      border-radius: 18px;
       box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
       margin-bottom: 12px;
     }
@@ -175,10 +179,14 @@ export const Insights = styled(Row)`
 `;
 
 export const InsightColumn = styled(Column)`
+  > :first-child {
+    margin-bottom: 8px;
+  }
+
   > :last-child {
-    margin-top: 40px;
-    width: 460px;
-    height: 185px;
+    margin-top: 30px;
+    width: 350px;
+    height: 155px;
     justify-content: space-between;
   }
 `;
@@ -200,7 +208,7 @@ export const PersonaSection = styled.div`
   width: unset !important;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 370px 560px;
+  grid-template-columns: 325px 460px;
   column-gap: 32px;
 `;
 
@@ -222,17 +230,18 @@ export const PersonaText = styled.div`
   }
 
   > :nth-child(2) {
+    margin-top: 8px !important;
     > :first-child {
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
   }
 
   > :not(:first-child) {
-    margin-top: 10px;
+    margin-top: 16px;
   }
 
   ul {
-    margin-top: 2px;
+    margin-top: 4px;
     margin-left: 10px;
 
     > :not(:first-child) {
@@ -248,8 +257,8 @@ export const PlayPauseVideo = styled.video`
 export const ImprovementVideos = styled(Row)`
   position: relative;
   svg {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     fill: ${({ theme }) => theme.palette.red};
   }
 
@@ -260,14 +269,14 @@ export const ImprovementVideos = styled(Row)`
     left: 50%;
     transform: translate(-50%, 12px);
     color: ${({ theme }) => theme.palette['secondary-light']};
-    font-size: 20px;
+    font: ${({ theme }) => theme.textStyles.desktop['karla-t2']};
   }
 `;
 
 export const FinalGrid = styled.div`
   display: grid;
-  grid-template-columns: 250px 250px 250px 250px;
-  grid-gap: 25px;
+  grid-template-columns: 219px 219px 219px 219px;
+  grid-gap: 22px;
   justify-content: center;
 
   > img {
@@ -278,7 +287,7 @@ export const FinalGrid = styled.div`
 
 export const IFrame = styled.iframe`
   width: 100%;
-  height: 800px;
+  height: 575px;
   margin-top: 50px;
   border: 1px solid ${({ theme }) => theme.palette.border};
 `;
@@ -301,5 +310,10 @@ export const Reflections = styled.div`
 export const ThankYou = styled.div`
   > :first-child {
     margin-bottom: 38px;
+  }
+  margin-bottom: 160px;
+
+  a {
+    font-weight: 800;
   }
 `;
