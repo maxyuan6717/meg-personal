@@ -66,7 +66,7 @@ export const Home = () => {
               name="Dumpling Delight"
               tags={['UX Design', 'UX Research']}
               color="red"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+              description="a dine-in mobile ordering app for a fictional restaurant that combines the convenience of online ordering with the quality and unique social experience of dining in"
               link="/dumpling-delight"
             >
               <Row>
@@ -79,7 +79,7 @@ export const Home = () => {
               name="Clearify"
               tags={['UX Design', 'UX Research']}
               color="green"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+              description="a skincare browser extension that generates easily digestible and personalized cosmetics reports of products from inputted ingredients lists"
               link="/clearify"
             >
               <Styled.WorkImage src={Computer} />
