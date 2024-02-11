@@ -93,7 +93,7 @@ export const Work = ({ name, tags, color, description, link, children }) => {
           </Text>
         </Description>
       </Display>
-      <Name type="karla-h1" onClick={onClick}>
+      <Name type="karla-h3" onClick={onClick}>
         {name}
       </Name>
       <Tags>
