@@ -23,7 +23,7 @@ const Container = styled.div`
 
   &:hover {
     svg {
-      fill: ${({ theme }) => theme.palette.blue};
+      fill: ${({ theme }) => theme.palette.black};
     }
     transform: translateY(-10px);
   }
