@@ -360,16 +360,20 @@ export const Dumpling = () => {
               <Text type="karla-t3">
                 <ul>
                   <li>
-                    Earliest iterations contained multiple confirmation screens
-                    before sending an item to the kitchen, which was tedious and
-                    unnecessary
+                    First thought to follow traditional dine-in ordering process
+                    of multiple rounds of orders (e.g. appetizers → main →
+                    dessert)
                   </li>
                   <li>
-                    Reduced the number of ordering steps by allowing users to
-                    add as many items to the cart before directly sending them
-                    to the kitchen through the cart
+                    “Send to kitchen” option hidden behind unnecessary number of
+                    screens
                   </li>
+                  <li>Unclear navigation starting point</li>
                 </ul>
+              </Text>
+              <Text type="karla-t3">
+                <b>What I Changed:</b> send items anytime to the kitchen with
+                one click directly within the cart
               </Text>
               <div className="bg-number">1</div>
             </Styled.StepText>
@@ -382,17 +386,24 @@ export const Dumpling = () => {
               <Text type="karla-t3">
                 <ul>
                   <li>
-                    Replaced the previous system of multiple rounds of orders
-                    with a simplified add-to-cart process
+                    Original cart only provided a preview of orders and prices
+                  </li>
+                </ul>
+              </Text>
+              <Text type="karla-t3">
+                <b>What I Changed:</b>
+                <ul className="no-top-margin">
+                  <li>
+                    View added-to-cart and sent-to-kitchen items simultaneously
                   </li>
                   <li>
-                    Adjust an item&apos;s quantity before sending to the
-                    kitchen, track the status of all ordered items, & quickly
-                    reorder items all within the cart
+                    Ability to (1) adjust an item’s quantity before sending to
+                    the kitchen, (2) track the status of all ordered items, &
+                    (3) quickly reorder items
                   </li>
                   <li>
-                    Moved the cart icon from the top right corner of the screen
-                    to the center of the navigation bar for easy access
+                    Move cart icon from top right corner to center of navigation
+                    bar for increased visibility
                   </li>
                 </ul>
               </Text>
@@ -412,7 +423,7 @@ export const Dumpling = () => {
             </Styled.ImprovementVideos>
             <Styled.StepText maxWidth={400}>
               <Text type="karla-h1" size={25}>
-                Add consistent reminders to guide action
+                Enhance navigation with guided reminders
               </Text>
               <Text type="karla-t3">
                 <ul>
@@ -421,13 +432,18 @@ export const Dumpling = () => {
                     adding items to the cart and after receiving all ordered
                     items
                   </li>
+                </ul>
+              </Text>
+              <Text type="karla-t3">
+                <b>What I Changed:</b>
+                <ul>
                   <li>
                     Banner notification after adding an item to the cart reminds
                     customers to send orders to the kitchen
                   </li>
                   <li>
                     Banner notification once all ordered items have arrived
-                    reminds customers to advance to checkout once ready
+                    reminds customers to advance to checkout
                   </li>
                 </ul>
               </Text>
@@ -476,17 +492,14 @@ export const Dumpling = () => {
                 <b>Simplicity is key.</b> Users want to complete tasks with as
                 few obstacles and steps as possible. I discovered the importance
                 of minimizing the number of clicks it takes users to achieve a
-                goal, such as successfully ordering a menu item, without
-                sacrificing necessary functionalities needed to create an
-                easy-to-use, intuitive flow.
+                goal without sacrificing necessary functionalities needed to
+                create an easy-to-use, intuitive flow.
               </li>
               <li>
                 <b>The iterative-nature of design.</b> Designs are never really
-                complete after two or three iterations. Inevitably, they must be
-                handed off to engineers and brought to life, but they
-                continually evolve to meet new user needs. I learned to never be
-                fully satisfied with my end product and seek continuous
-                refinement.
+                complete after two or three iterations; they continually evolve
+                to meet new user needs. I learned to never be fully satisfied
+                with my end product and seek continuous refinement.
               </li>
             </ol>
           </Text>

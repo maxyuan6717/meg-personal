@@ -105,12 +105,15 @@ export const StepText = styled.div`
   max-width: ${({ maxWidth = 365 }) => maxWidth}px;
 
   ul {
-    margin-top: 15px;
-    margin-left: 10px;
+    margin: 15px 0 15px 10px;
 
     > :not(:first-child) {
       margin-top: 10px;
     }
+  }
+
+  ul.no-top-margin {
+    margin-top: 0 !important;
   }
 
   > .bg-number {
