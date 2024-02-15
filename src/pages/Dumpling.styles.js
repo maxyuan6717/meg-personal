@@ -8,8 +8,8 @@ export const Header = styled(Row)`
   padding: 190px 0 115px 0;
   background: linear-gradient(
     246deg,
-    #e5e5e5 15.53%,
-    rgba(229, 229, 229, 0.25) 89.74%
+    rgba(228, 37, 12, 0.25) 15.53%,
+    rgba(228, 37, 12, 0.75) 89.74%
   );
   justify-content: center;
 

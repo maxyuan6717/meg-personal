@@ -32,20 +32,20 @@ export const Dumpling = () => {
       <Navbar fixed />
       <Styled.Header>
         <div>
-          <Text type="cursive-c1" color="red" lineHeight={55}>
+          <Text type="cursive-c1" color="white" lineHeight={55}>
             DUMPLING
             <br />
             DELIGHT
           </Text>
-          <Text type="text-t4" color="red">
+          <Text type="text-t4" color="white">
             Enhancing the dine-in
             <br />
             ordering experience.
           </Text>
         </div>
         <Styled.Phone src={Phone1} />
-        <Styled.Phone src={Phone2} />
         <Styled.Phone src={Phone3} />
+        <Styled.Phone src={Phone2} />
       </Styled.Header>
       <Styled.Content>
         <Styled.IntroSection>
