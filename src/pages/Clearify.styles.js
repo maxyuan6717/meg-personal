@@ -2,22 +2,20 @@ import styled from 'styled-components';
 
 import { ReactComponent as _Blob } from '../images/clearify-case/blob.svg';
 import { Column, Row, Text } from '../ui';
-import { Color } from '../util';
 
 export const Header = styled(Row)`
   width: 100%;
-  padding: 130px 0;
-  background-color: ${({ theme }) =>
-    Color.makeHexTranslucent(theme.palette.green, 0.7)};
+  padding: 80px 0;
+  background: linear-gradient(
+    246deg,
+    #40a582 15.53%,
+    rgba(64, 165, 130, 0.25) 89.74%
+  );
   justify-content: center;
-
-  > :first-child {
-    margin-right: 20px;
-  }
 `;
 
 export const Computer = styled.img`
-  width: 600px;
+  width: 500px;
   height: auto;
 
   margin-right: 0 !important;
@@ -32,7 +30,7 @@ export const ClearifyLogo = styled.img`
 export const Content = styled(Column)`
   margin: 0 auto;
   width: 100%;
-  max-width: 1074px;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
 
@@ -42,17 +40,38 @@ export const Content = styled(Column)`
 `;
 
 export const IntroSection = styled(Row)`
-  padding: 60px 80px 0 80px;
+  padding: 50px 95px 0 95px;
   margin-bottom: -20px;
   justify-content: space-between;
   align-items: flex-start;
 
   > * {
-    max-width: 500px;
+    max-width: 311px;
     > :first-child {
-      font-weight: 500;
-      margin-bottom: 20px;
+      font-weight: 800;
+      margin-bottom: 10px;
     }
+  }
+`;
+
+export const ProblemQuestion = styled(Text)`
+  margin-top: 50px;
+  padding: 0 205px;
+
+  text-align: center;
+  position: relative;
+
+  > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 160px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.palette.green};
+    opacity: 0.07;
+    z-index: -1;
+    line-height: 160px;
   }
 `;
 
@@ -73,19 +92,23 @@ export const SectionTitle = styled.div`
 export const CompetitorLogos = styled.img`
   width: 680px;
   height: auto;
-  margin: 30px auto;
+  margin: 50px auto;
 `;
 
 export const CompetitorCols = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
-  padding: 0 50px;
-  column-gap: 36px;
+  padding: 0 75px;
+  column-gap: 62px;
 
   li {
-    font: ${({ theme }) => theme.textStyles.desktop['text-t5']};
+    font: ${({ theme }) => theme.textStyles.desktop['karla-t2']};
     margin-top: 8px;
+  }
+
+  ul {
+    margin-top: 18px;
   }
 `;
 
