@@ -13,6 +13,11 @@ import Final4 from '../images/dumpling-case/final4.png';
 import Final5 from '../images/dumpling-case/final5.png';
 import Final6 from '../images/dumpling-case/final6.png';
 import Haidilao from '../images/dumpling-case/heidilao.jpeg';
+import IdeaCustomizing from '../images/dumpling-case/idea-customizing.png';
+import IdeaHome from '../images/dumpling-case/idea-home.png';
+import IdeaMenu from '../images/dumpling-case/idea-menu.png';
+import IdeaOrdering from '../images/dumpling-case/idea-ordering.png';
+import IdeaSplitting from '../images/dumpling-case/idea-splitting.png';
 import Persona from '../images/dumpling-case/persona.png';
 import Sunright from '../images/dumpling-case/sunright.png';
 import Phone1 from '../images/dumpling-preview/phone1.png';
@@ -339,6 +344,43 @@ export const Dumpling = () => {
             </div>
           </Styled.PersonaText>
         </Styled.PersonaSection>
+        <Styled.SectionDivider>IDEATING</Styled.SectionDivider>
+        <Styled.SectionTitle>
+          Focusing on the user journey with lo-fi designs.
+        </Styled.SectionTitle>
+        <Text type="karla-t2">
+          I experimented with multiple layouts for key pages along the user
+          journey, which included the homepage, menu, cart preview, and payment.
+          <br />
+          <br />
+          I decided on a bottom navigation bar for easy access across all pages.
+          I also chose to split up the ordering process into multiple screens
+          that mimic the typical delivery/pickup/takeout ordering process of
+          other food apps that users would be familiar with. Users preview their
+          orders from the cart, confirm their orders on another screen, send
+          their order to the kitchen (similar to the payment screen), and,
+          lastly, track their order progress.
+          <br />
+          <br />I explored other potential online payment forms and came up with
+          a “Split the Bill” feature that would allow parties of up to 3 to
+          individually select their ordered items and pay with card. While
+          sketching, I considered several user flows and sought to minimize the
+          number of screens users must click through in order to simplify the
+          feature as much as possible.
+        </Text>
+        <Styled.IdeatingImages>
+          <Column>
+            <img src={IdeaHome} height={130} />
+            <img src={IdeaMenu} height={130} />
+            <Row>
+              <img src={IdeaOrdering} height={130} />
+              <img src={IdeaCustomizing} height={130} />
+            </Row>
+          </Column>
+          <Column>
+            <img src={IdeaSplitting} height={284} />
+          </Column>
+        </Styled.IdeatingImages>
         <Styled.SectionDivider>TESTING + ITERATING</Styled.SectionDivider>
         <Styled.SectionTitle>3 major areas of improvement</Styled.SectionTitle>
         <Text type="karla-t2">

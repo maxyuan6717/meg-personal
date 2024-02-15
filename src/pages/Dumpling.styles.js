@@ -253,6 +253,10 @@ export const PersonaText = styled.div`
   }
 `;
 
+export const IdeatingImages = styled(Row)`
+  margin-top: 30px;
+`;
+
 export const PlayPauseVideo = styled.video`
   cursor: pointer;
 `;
