@@ -95,10 +95,10 @@ export const Dumpling = () => {
                 <ul>
                   <li>Start ordering whenever you are ready</li>
                   <li>
-                    Easy-to-read menu with enticing imagery and nutritional
-                    breakdowns
+                    Order as many items as you&apos;d like at once and reorder
+                    anytime
                   </li>
-                  <li>Order more and reorder anytime</li>
+                  <li>Easily edit customizable options and adjust quantity</li>
                 </ul>
               </Text>
               <div className="bg-number">1</div>
@@ -118,32 +118,32 @@ export const Dumpling = () => {
               <Text type="karla-t2">
                 <ul>
                   <li>
-                    Scan your table barcode at the start to link your orders to
-                    the kitchen
+                    Scan table barcode at the start to link orders to the
+                    kitchen
                   </li>
                   <li>
-                    Receive up-to-date tracking for each ordered item from
+                    Receive detailed tracking for each ordered item from
                     preparation to arrival
                   </li>
-                  <li>Track the status of all ordered items on one page</li>
+                  <li>Track the status of all ordered items from the cart</li>
                 </ul>
               </Text>
               <div className="bg-number">2</div>
             </Styled.StepText>
           </Styled.Step>
-          <Styled.Step>
+          <Styled.Step gap={16}>
             <Styled.StepText>
               <Text type="karla-h1">Paying</Text>
               <Text type="karla-t2">
                 <ul>
                   <li>Pay whenever you are ready</li>
                   <li>
-                    Multiple payment options, including traditionally through
-                    check and via online payment forms
+                    Multiple payment options, including traditional paper bill
+                    and online payment forms
                   </li>
                   <li>
-                    “Split the Bill” feature eliminates the hassle of pulling
-                    out a calculator post-payment (for parties up to 3)
+                    “Split the Bill” feature eliminates hassle of calculating
+                    separate bills post-payment (for parties up to 3)
                   </li>
                 </ul>
               </Text>
