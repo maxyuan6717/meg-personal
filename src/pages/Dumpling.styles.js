@@ -5,7 +5,7 @@ import { Color } from '../util';
 
 export const Header = styled(Row)`
   width: 100%;
-  padding: 190px 0 115px 0;
+  padding: 155px 0 80px 0;
   background: linear-gradient(
     246deg,
     rgba(228, 37, 12, 0.25) 15.53%,
@@ -19,7 +19,7 @@ export const Header = styled(Row)`
 `;
 
 export const Phone = styled.img`
-  width: 230px;
+  width: 210px;
   height: auto;
 `;
 
