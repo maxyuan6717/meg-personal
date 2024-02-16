@@ -89,6 +89,73 @@ export const SectionTitle = styled.div`
   font-weight: 700;
 `;
 
+export const Solution = styled.div`
+  margin: 50px auto 30px auto;
+  padding: 0 85px;
+  position: relative;
+`;
+
+export const SolutionTR = styled.img`
+  position: absolute;
+  border-radius: 13.511px;
+  box-shadow: 0px 1.351px 13.511px 0px rgba(0, 77, 54, 0.5);
+  width: 270px;
+  top: 0;
+  right: 235px;
+`;
+
+export const SolutionBL = styled.img`
+  position: absolute;
+  border-radius: 13.511px;
+  box-shadow: 0px 1.351px 13.511px 0px rgba(0, 77, 54, 0.5);
+  width: 270px;
+  left: 235px;
+  bottom: 0;
+`;
+
+export const SolutionTL = styled(Text)`
+  max-width: 251px;
+  text-align: end;
+  margin-top: 44px;
+  margin-bottom: 293px;
+  padding-top: 8px;
+  border-top: 2px solid ${({ theme }) => theme.palette.green};
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: ${({ theme }) => theme.palette.green};
+    top: 0px;
+    left: 0px;
+    transform: translate(-50%, calc(-50% - 1px));
+  }
+`;
+
+export const SolutionBR = styled(Text)`
+  max-width: 260px;
+  margin-left: 500px;
+  margin-bottom: 87px;
+  padding-top: 8px;
+  border-top: 2px solid ${({ theme }) => theme.palette.green};
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: ${({ theme }) => theme.palette.green};
+    top: 0px;
+    right: 0px;
+    transform: translate(50%, calc(-50% - 1px));
+  }
+`;
+
 export const CompetitorLogos = styled.img`
   width: 680px;
   height: auto;

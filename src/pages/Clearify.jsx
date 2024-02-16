@@ -18,6 +18,8 @@ import Insight2 from '../images/clearify-case/insight2.png';
 import Insight3 from '../images/clearify-case/insight3.png';
 import LogoGreen from '../images/clearify-case/logo_green.png';
 import OutputScreens from '../images/clearify-case/output_screens.png';
+import SolutionBL from '../images/clearify-case/solution_bl.png';
+import SolutionTR from '../images/clearify-case/solution_tr.png';
 import SquareLogo1 from '../images/clearify-case/square_logo1.png';
 import SquareLogo2 from '../images/clearify-case/square_logo2.png';
 import Computer from '../images/clearify-preview/computer.png';
@@ -99,6 +101,18 @@ export const Clearify = () => {
           reducing the need to switch between multiple tabs of skincare
           research.
         </Text>
+        <Styled.Solution>
+          <Styled.SolutionTL type="karla-t2" color="green">
+            Clean, straightforward interface for seamless integration with
+            users&apos; online research
+          </Styled.SolutionTL>
+          <Styled.SolutionBR type="karla-t2" color="green">
+            Comprehensive yet succinct product breakdown highlighting highest
+            priority concerns
+          </Styled.SolutionBR>
+          <Styled.SolutionTR src={SolutionTR} />
+          <Styled.SolutionBL src={SolutionBL} />
+        </Styled.Solution>
         <Styled.SectionDivider>COMPETITIVE ANALYSIS</Styled.SectionDivider>
         <Styled.SectionTitle>
           Current skincare analysis tools lack a balance between clear
