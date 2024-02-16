@@ -145,18 +145,18 @@ export const Clearify = () => {
             <Text type="karla-h2">Competitor Weaknesses</Text>
             <ul>
               <li>
-                <b>Unclear Ratings System</b> - individual ingredient and
-                overall product ratings/scores lack helpfulness due to vague
-                explanations.
+                <b>Unclear Ratings System</b> - individual ingredient ratings
+                and overall product scores vary across sites due to inconsistent
+                and vague codifications.
               </li>
               <li>
                 <b>Text-Heavy Pages</b> - information overload creates visual
-                confusion and overwhelm, which can deter users away from a site.
+                confusion, which can overwhelm and deter users away from a site.
               </li>
               <li>
                 <b>Organization & Layout</b> - optimizing page layout to better
                 reflect users&apos; greatest skincare concerns could increase
-                usability and satisfaction.
+                usability and user satisfaction.
               </li>
             </ul>
           </Column>
