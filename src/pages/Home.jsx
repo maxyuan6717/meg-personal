@@ -101,9 +101,9 @@ export const Home = () => {
             <br />
             <br />
             I&apos;m also on a mission to read more books, be a better cook, and
-            explore the world. Current read: The Laws of Human Nature by Robert
-            Greene. Current food fixation: oatmeal. Next destination: Japan
-            during cherry blossom season🌸.
+            explore the world. Current read: <i>The Laws of Human Nature</i> by
+            Robert Greene. Current food fixation: oatmeal. Next destination:
+            Japan during cherry blossom season🌸.
             <br />
             <br />
             Reach out to connect, chat, or discuss a project.

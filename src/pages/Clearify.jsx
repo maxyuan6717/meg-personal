@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { Footer } from '../components/Footer';
+import { Footer } from '../components/NewFooter';
 import { Navbar } from '../components/NewNavbar';
 import { PlayWhenVisibleVideo } from '../components/PlayWhenVisibleVideo';
 import { ScrollUp } from '../components/ScrollUp';
@@ -22,7 +22,7 @@ import SquareLogo1 from '../images/clearify-case/square_logo1.png';
 import SquareLogo2 from '../images/clearify-case/square_logo2.png';
 import Computer from '../images/clearify-preview/computer.png';
 import ClearifyLogo from '../images/clearify-preview/logo.png';
-import { Column, Link, Row, Text } from '../ui';
+import { Column, Row, Text } from '../ui';
 
 import * as Styled from './Clearify.styles';
 
@@ -153,11 +153,11 @@ export const Clearify = () => {
         </Styled.SectionTitle>
         <Text type="karla-t2">
           We conducted a survey to better gauge users&apos; skincare shopping
-          behaviors and needs, receiving 22 responses from university students.
+          behaviors and needs, receiving responses from 22 university students.
         </Text>
         <Styled.InsightsGrid>
           <Styled.Insight>
-            <Text size={28} weight={700}>
+            <Text type="karla-h1" size={24}>
               Insight #1
             </Text>
             <Text type="karla-t2">
@@ -165,8 +165,8 @@ export const Clearify = () => {
               product ingredients (rated 4 out of 5), yet over half (54.5%)
               rated the ease of understanding the impact of ingredients as a 1
               or 2 out of 5, indicating an{' '}
-              <span className="highlight">educational gap</span> in how
-              ingredient effects are communicated to users.
+              <span className="highlight">educational gap</span> and a need to
+              better communicate ingredient effects to users.
             </Text>
             <Styled.Blob color="#FF9A24" />
           </Styled.Insight>
@@ -176,14 +176,14 @@ export const Clearify = () => {
           </Column>
           <img src={Insight2} alt="Insight 2" width={450} height="auto" />
           <Styled.Insight>
-            <Text size={28} weight={700}>
+            <Text type="karla-h1" size={24}>
               Insight #2
             </Text>
             <Text type="karla-t2">
-              Common skincare concerns are moisturizing (72.7%), acne-fighting
-              (63.6%), and UV protecting (63.6%). Respondents also highlighted
-              the importance of finding products with clean, non-harsh
-              ingredients that are{' '}
+              <span className="highlight">Common skincare concerns</span>{' '}
+              include moisturizing (72.7%), acne-fighting (63.6%), and UV
+              protecting (63.6%). Respondents also noted the importance of
+              finding products with clean, non-harsh ingredients that are{' '}
               <span className="highlight">
                 compatible with their skin types
               </span>{' '}
@@ -192,14 +192,15 @@ export const Clearify = () => {
             <Styled.Blob color="#A4D259" />
           </Styled.Insight>
           <Styled.Insight>
-            <Text size={28} weight={700}>
+            <Text type="karla-h1" size={24}>
               Insight #3
             </Text>
             <Text type="karla-t2">
-              Most users have not used apps or extensions to find skincare,
-              relying mainly on <span className="highlight">social media</span>{' '}
-              and <span className="highlight">word of mouth</span> for reviews
-              and recommendations of skincare products.
+              Most users have not encountered or used specifically-tailored
+              skincare apps or extensions to find skincare, relying instead on{' '}
+              <span className="highlight">social media</span> and{' '}
+              <span className="highlight">word of mouth</span> for reviews and
+              recommendations of skincare products.
             </Text>
             <Styled.Blob color="#93D3EE" />
           </Styled.Insight>
@@ -207,6 +208,107 @@ export const Clearify = () => {
             <img src={Insight3} alt="Insight 3" width={350} height="auto" />
           </Row>
         </Styled.InsightsGrid>
+        <Styled.SectionDivider>TESTING + ITERATING</Styled.SectionDivider>
+
+        <Text type="karla-t2">
+          The evolution of our design relied on user survey responses and
+          usability testing within our team due to the short project timeline.
+          However, the quick turnaround of feedback allowed us to iterate
+          continuously and prioritize a seamless and intuitive user experience.
+        </Text>
+        <br />
+        <Text type="karla-h1">Input screen: minimizing user effort.</Text>
+        <br />
+        <Text type="karla-t2">
+          A common theme across all wireframes for the input screen was
+          simplicity.{' '}
+          <b>
+            <i>
+              How can we streamline the input process so that users expend as
+              little effort as possible attaining product analyses?
+            </i>
+          </b>{' '}
+          Ultimately, we opted for a singular input field, clear
+          calls-to-action, and minimal branding to stay consistent with
+          Clearify&apos;s clean visual identity.
+        </Text>
+        <Styled.InputScreens src={InputScreens} alt="Input Screens" />
+        <Text type="karla-h1">
+          Output screen: in-depth and personalized yet straightforward analysis.
+        </Text>
+        <br />
+        <Text type="karla-t2">
+          Because skin type compatibility was a primary user concern as
+          indicated from our user survey, we placed a skin type suitability
+          graphic at the head of the analysis screen. Thus, users receive
+          personalized insight first thing.
+          <br />
+          <br />
+          Users pinpointed 2 additional concerns, which confirmed our initial
+          approach to the output screen:
+          <Styled.OutputConcerns>
+            <li>
+              &ldquo;Potential harmful ingredients&rdquo; section-{' '}
+              <span>
+                confusion over the combination of the red-green color coding and
+                “[ingredient]-free” wording revealed a need for clarification.
+                Thus, we simplified the section header and removed the
+                “[ingredient]-free” language.
+              </span>
+            </li>
+            <li>
+              &ldquo;Beneficial product effects&rdquo; section -{' '}
+              <span>
+                adding icons for each potential product highlight aided easy
+                identification of the positive effects of a skincare product.
+              </span>
+            </li>
+          </Styled.OutputConcerns>
+        </Text>
+        <Styled.OutputScreens src={OutputScreens} alt="Output Screens" />
+        <Text type="karla-h1">Further enhancing clarity</Text>
+        <br />
+        <Text type="karla-t2">
+          <Styled.Enhancements>
+            <li>
+              <b>Eliminated rating systems</b> to minimize confusion and the
+              friction of needing to learn what each rating indicates
+            </li>
+            <li>
+              <b>Reduced information overload</b> by removing the redundant
+              ingredients list within the output screen
+            </li>
+            <li>
+              <b>Maintained a consistent, left-aligned layout</b> with clearly
+              marked sections for ease of readability
+            </li>
+          </Styled.Enhancements>
+        </Text>
+        <Styled.SectionDivider>FINAL PRODUCT</Styled.SectionDivider>
+        <Styled.SectionTitle>The final design</Styled.SectionTitle>
+        <Row justify="center" align="flex-start">
+          <Styled.FinalDesignColumn>
+            <Text type="karla-h2" size={22}>
+              Input Screen
+            </Text>
+            <Styled.FinalScreen src={FinalInput} />
+          </Styled.FinalDesignColumn>
+          <Styled.FinalDesignColumn>
+            <Text type="karla-h2" size={22}>
+              Output Screen
+            </Text>
+            <Styled.FinalScreen src={FinalOutput} />
+          </Styled.FinalDesignColumn>
+        </Row>
+        <Text type="karla-h1" size={24}>
+          In Action
+        </Text>
+        <Styled.DemoVideo justify="center">
+          <PlayWhenVisibleVideo
+            width="940"
+            src="videos/clearify-case/demo.mov"
+          />
+        </Styled.DemoVideo>
         <Styled.SectionDivider>DESIGN SYSTEM</Styled.SectionDivider>
         <Styled.SectionTitle>
           Unifying style to build a minimalist, cohesive brand identity.
@@ -214,10 +316,10 @@ export const Clearify = () => {
         <Text type="karla-t2">
           The design system features a calming shade of green paired with
           simplistic typography to emphasize Clearify&apos;s mission of
-          providing reliable and easily understandable cosmetics reports. The
-          background textured gradient fuses together hues of green with warm
-          shades of yellow to create an inviting look. The holistic minimalist
-          aesthetic pushes forth the idea of simplifying skincare shopping.
+          providing reliable and easily understandable reports. The background
+          textured gradient fuses together hues of green with warm shades of
+          yellow to create an inviting look. The holistic minimalist aesthetic
+          pushes forth the idea of simplifying skincare shopping.
         </Text>
         <Styled.DesignSystem>
           <Styled.DesignSystemCol>
@@ -291,115 +393,7 @@ export const Clearify = () => {
           <Styled.SquareLogo src={SquareLogo1} alt="Square Logo 1" />
           <Styled.SquareLogo src={SquareLogo2} alt="Square Logo 2" />
         </Styled.Logos>
-        <Styled.SectionDivider>TESTING + ITERATING</Styled.SectionDivider>
-
-        <Text type="karla-t2">
-          The evolution of our design was based on user survey responses and
-          usability testing within our team due to the short timespan. However,
-          the quick turnaround of feedback allowed us to iterate continuously
-          and thus craft a more intuitive and seamless user experience.
-        </Text>
-        <br />
-        <Text type="text-t1" weight={700}>
-          Input screen: minimizing user effort.
-        </Text>
-        <br />
-        <Text type="karla-t2">
-          A common theme across all wireframes for the input screen was
-          simplicity.{' '}
-          <b>
-            <i>
-              How can we streamline the input process so that users expend as
-              little effort as possible attaining product analyses?
-            </i>
-          </b>{' '}
-          Ultimately, we opted for a singular input field, clear
-          calls-to-action, and minimal branding to stay consistent with
-          Clearify&apos;s clean visual identity.
-        </Text>
-        <Styled.InputScreens src={InputScreens} alt="Input Screens" />
-        <Text type="text-t1" weight={700}>
-          Output screen: in-depth and personalized yet straightforward analysis.
-        </Text>
-        <br />
-        <Text type="karla-t2">
-          Because skin type compatibility was a primary user concern as
-          indicated from our user survey, we placed a skin type suitability
-          graphic at the head of the analysis screen. Thus, users receive
-          personalized insight first thing.
-          <br />
-          <br />
-          Users pinpointed 2 additional concerns, which confirmed our initial
-          approach to the output screen: 1) potential harmful ingredients and 2)
-          the beneficial effects of a product.
-          <Styled.OutputConcerns>
-            <li>
-              Potential harmful ingredients -{' '}
-              <span>
-                feedback from initial iterations revealed confusion over the
-                combination of the red-green color coding and “ingredient-free”
-                wording. The need to clarify exactly which harmful ingredients
-                are present within a product led to simplifying the language and
-                section header.
-              </span>
-            </li>
-            <li>
-              Beneficial product effects -{' '}
-              <span>
-                added icons for ease of identification of the positive effects
-                of a skincare product, such as moisturizing, acne-fighting, and
-                brightening.
-              </span>
-            </li>
-          </Styled.OutputConcerns>
-        </Text>
-        <Styled.OutputScreens src={OutputScreens} alt="Output Screens" />
-        <Text type="text-t1" weight={700}>
-          Enhancing clarity
-        </Text>
-        <br />
-        <Text type="karla-t2">
-          <Styled.Enhancements>
-            <li>
-              <b>Eliminated rating systems</b> to minimize confusion and the
-              friction of needing to learn how they are codified
-            </li>
-            <li>
-              <b>Reduced information overload</b> by removing the redundant
-              ingredients list within the output screen
-            </li>
-            <li>
-              <b>Maintained a consistent, left-aligned layout</b> with clearly
-              marked sections for ease of readability
-            </li>
-          </Styled.Enhancements>
-        </Text>
-        <Styled.SectionDivider>FINAL PRODUCT</Styled.SectionDivider>
-        <Styled.SectionTitle>The final design</Styled.SectionTitle>
-        <Row justify="center" align="flex-start">
-          <Styled.FinalDesignColumn>
-            <Text type="text-t3" weight={700}>
-              Input Screen
-            </Text>
-            <Styled.FinalScreen src={FinalInput} />
-          </Styled.FinalDesignColumn>
-          <Styled.FinalDesignColumn>
-            <Text type="text-t3" weight={700}>
-              Output Screen
-            </Text>
-            <Styled.FinalScreen src={FinalOutput} />
-          </Styled.FinalDesignColumn>
-        </Row>
-        <Text type="text-t3" weight={700}>
-          In Action
-        </Text>
-        <Styled.DemoVideo justify="center">
-          <PlayWhenVisibleVideo
-            width="945"
-            src="videos/clearify-case/demo.mov"
-          />
-        </Styled.DemoVideo>
-        <Styled.SectionDivider>REFLECTIONS + NEXT STEPS</Styled.SectionDivider>
+        <Styled.SectionDivider>REFLECTIONS & NEXT STEPS</Styled.SectionDivider>
         <Styled.SectionTitle>
           Keeping an open mind and staying flexible.
         </Styled.SectionTitle>
@@ -409,26 +403,36 @@ export const Clearify = () => {
           team. The fast-paced setting taught me to iterate rapidly and
           efficiently. I also gained a newfound appreciation for the power of
           close collaboration.
-          <br />
-          <br />
+        </Text>
+        <Styled.NextSteps type="karla-h1">Next steps...</Styled.NextSteps>
+        <Text type="karla-t2">
           With more time, I would incorporate even greater personalization into
-          the extension. A skincare quiz before utilizing the extension would
-          allow users to further specify their skincare concerns. In turn, the
-          extension would carefully curate product breakdowns that address
-          users&apos; needs by highlighting specific ingredients to avoid or
-          look out for. Implementing a comparison feature could streamline the
-          research process even more by allowing users to contrast two skincare
-          products at once.
+          the extension.
+          <Styled.NextStepsList>
+            <li>
+              <b>
+                Pre-analysis skincare quiz for users to denote their skincare
+                concerns to a greater level of specificity.
+              </b>{' '}
+              In turn, the extension would carefully curate product breakdowns
+              by highlighting particularly beneficial and irritative ingredients
+              for users to look out for.
+            </li>
+            <li>
+              <b>Comparison feature for side-by-side product analyses.</b>{' '}
+              Allowing users to compare two skincare products at once would
+              streamline the research process even more and help users make more
+              informed choices.
+            </li>
+          </Styled.NextStepsList>
         </Text>
         <Styled.SectionDivider>&nbsp;</Styled.SectionDivider>
         <Styled.ThankYou>
-          <Text size={32} weight={700}>
-            Thank you for reading!
-          </Text>
-          <Text type="text-t4">
+          <Text type="karla-h2">Thank you for reading!</Text>
+          <Text type="karla-t2">
             Reach out to me at{' '}
-            <Link href="mailto: megyuan@ucla.edu">megyuan@ucla.edu</Link> to
-            learn more and connect.
+            <a href="mailto: megyuan@ucla.edu">megyuan@ucla.edu</a> to learn
+            more and connect.
           </Text>
         </Styled.ThankYou>
       </Styled.Content>

@@ -571,7 +571,7 @@ export const Dumpling = () => {
         </Styled.Reflections>
         <Styled.SectionDivider>&nbsp;</Styled.SectionDivider>
         <Styled.ThankYou>
-          <Text type="kayla-h2">Thank you for reading!</Text>
+          <Text type="karla-h2">Thank you for reading!</Text>
           <Text type="karla-t2">
             Reach out to me at{' '}
             <a href="mailto: megyuan@ucla.edu">megyuan@ucla.edu</a> to learn

@@ -5,7 +5,7 @@ import { Column, Row, Text } from '../ui';
 
 export const Header = styled(Row)`
   width: 100%;
-  padding: 80px 0;
+  padding: 155px 0 80px 0;
   background: linear-gradient(
     246deg,
     #40a582 15.53%,
@@ -79,13 +79,13 @@ export const SectionDivider = styled.div`
   border-top: 1px solid ${({ theme }) => theme.palette.border};
   padding: 30px 0;
   margin-top: 80px;
-  font: ${({ theme }) => theme.textStyles.desktop['text-t5']};
+  font: ${({ theme }) => theme.textStyles.desktop['karla-h3']};
   font-weight: 500;
 `;
 
 export const SectionTitle = styled.div`
   margin-bottom: 30px;
-  font: ${({ theme }) => theme.textStyles.desktop['text-t1']};
+  font: ${({ theme }) => theme.textStyles.desktop['karla-h1']};
   font-weight: 700;
 `;
 
@@ -124,10 +124,10 @@ export const InsightsGrid = styled.div`
 
 export const Insight = styled.div`
   position: relative;
-  max-width: 438px;
+  max-width: 350px;
 
   > :first-child {
-    margin-bottom: 5px;
+    margin-bottom: 12px;
   }
 
   .highlight {
@@ -270,20 +270,38 @@ export const Enhancements = styled.ul`
 export const FinalDesignColumn = styled(Column)`
   margin: 36px 21px 40px 21px;
   > :first-child {
-    margin-bottom: 8px;
+    margin-bottom: 15px;
   }
 `;
 
 export const FinalScreen = styled.img`
-  width: 332px;
+  width: 315px;
 `;
 
 export const DemoVideo = styled(Row)`
   margin-top: 36px;
 `;
 
+export const NextSteps = styled(Text)`
+  margin: 30px 0;
+`;
+
+export const NextStepsList = styled.ul`
+  margin-top: 8px;
+  margin-left: 10px;
+
+  > :not(:first-child) {
+    margin-top: 4px;
+  }
+`;
+
 export const ThankYou = styled.div`
   > :first-child {
     margin-bottom: 38px;
+  }
+  margin-bottom: 160px;
+
+  a {
+    font-weight: 800;
   }
 `;
