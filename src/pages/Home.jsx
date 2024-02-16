@@ -22,9 +22,15 @@ export const Home = () => {
   const { section } = state || {};
 
   const scrollTo = (section, smooth = true) => {
-    const y = (
-      section === 'works' ? worksRef : section === 'about' ? aboutRef : artRef
-    ).current.offsetTop;
+    const y =
+      section === 'home'
+        ? 100
+        : (section === 'works'
+            ? worksRef
+            : section === 'about'
+            ? aboutRef
+            : artRef
+          ).current.offsetTop;
     window.scrollTo({ top: y - 100, behavior: smooth ? 'smooth' : 'auto' });
   };
 

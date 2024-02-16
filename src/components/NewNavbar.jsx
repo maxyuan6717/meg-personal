@@ -76,7 +76,7 @@ export const Navbar = ({ fixed = false, scrollTo: _scrollTo }) => {
 
   return (
     <Container fixed={fixed}>
-      <Logo onClick={() => navigate('/')}>
+      <Logo onClick={() => scrollTo('home')}>
         <Icons.logo width={36} height={36} />
       </Logo>
       <NavLink onClick={() => scrollTo('works')} type="karla-h3">
@@ -85,9 +85,6 @@ export const Navbar = ({ fixed = false, scrollTo: _scrollTo }) => {
       <NavLink onClick={() => scrollTo('about')} type="karla-h3">
         About
       </NavLink>
-      {/* <NavLink onClick={() => scrollTo('art')} type="karla-h3">
-        Artwork
-      </NavLink> */}
     </Container>
   );
 };
