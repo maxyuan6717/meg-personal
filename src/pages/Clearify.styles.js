@@ -217,7 +217,7 @@ export const DesignSystem = styled.div`
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 80px;
+  column-gap: 40px;
 `;
 
 export const DesignSystemCol = styled.div`
